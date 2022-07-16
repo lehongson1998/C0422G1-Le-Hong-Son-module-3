@@ -1,15 +1,26 @@
-use case_study;
+USE case_study;
 INSERT INTO trinh_do(ten_trinh_do)
-VALUES ("trung cấp"),("cao đẳng"),("Đại học"),("sau ĐẠI học");
+VALUES ("trung cấp"),
+	   ("cao đẳng"),
+       ("Đại học"),
+       ("sau ĐẠI học");
 
 INSERT INTO vi_tri(ten_vi_tri) 
-VALUES("Quản Lý"),("Nhân Viên");
+VALUES("Quản Lý"),
+	  ("Nhân Viên");
 
 INSERT INTO bo_phan(ten_bo_phaN) 
-VALUES ("Sale – MarKeting"),("Hành Chính"),("Phục vụ"),("Quản LÝ");
+VALUES ("Sale – MarKeting"),
+	   ("Hành Chính"),
+       ("Phục vụ"),
+       ("Quản LÝ");
 
 INSERT INTO loai_khach(ten_loại_khach)
-VALUES ("Diamond"),("Platinium"), ("Gold"), ("Silver"), ("Member");
+VALUES ("Diamond"),
+	   ("Platinium"),
+       ("Gold"),
+       ("Silver"),
+       ("Member");
 
 INSERT INTO nhan_vien(ma_nhan_vien, ho_ten, ngay_sinh, so_cmnd, luong, so_dien_thoai, email, dia_chi, ma_vi_tri, ma_trinh_do, ma_bo_phan)
 VALUES (1, "Nguyễn Văn An",	"1970-11-07", "456231786",	"10000000",	"0901234121", "Annguyen@gmail.com",	"295 Nguyễn Tất Thành, Đà Nẵng", 1,	3, 1),

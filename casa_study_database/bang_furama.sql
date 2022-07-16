@@ -1,18 +1,19 @@
+DROP DATABASE IF EXISTS case_study;
 CREATE DATABASE case_study;
 USE case_study;
 
 CREATE TABLE case_study.vi_tri (
-    ma_vi_tri INT PRIMARY KEY,
+    ma_vi_tri INT PRIMARY KEY AUTO_INCREMENT,
     ten_vi_tri VARCHAR(45)
 );
 
 CREATE TABLE case_study.trinh_do (
-    ma_trinh_do INT PRIMARY KEY,
+    ma_trinh_do INT PRIMARY KEY AUTO_INCREMENT,
     ten_trinh_do VARCHAR(45)
 );
 
 CREATE TABLE case_study.bo_phan (
-    ma_bo_phan INT PRIMARY KEY,
+    ma_bo_phan INT PRIMARY KEY AUTO_INCREMENT,
     ten_bo_phan VARCHAR(45)
 );
 
@@ -35,10 +36,12 @@ CREATE TABLE case_study.nhan_vien (
     FOREIGN KEY (ma_bo_phan)
         REFERENCES case_study.bo_phan (ma_bo_phan)
 );
+
 CREATE TABLE loai_khach (
-    ma_loai_khach INT PRIMARY KEY,
+    ma_loai_khach INT PRIMARY KEY AUTO_INCREMENT,
     ten_loại_khach VARCHAR(45)
 );
+
 CREATE TABLE case_study.khach_hang (
     ma_khach_hang INT PRIMARY KEY,
     ma_loai_khach INT,
@@ -54,14 +57,15 @@ CREATE TABLE case_study.khach_hang (
 );
 
 CREATE TABLE loai_dich_vu (
-    ma_loai_dich_vu INT PRIMARY KEY,
+    ma_loai_dich_vu INT PRIMARY KEY AUTO_INCREMENT,
     ten_loai_dich_vu VARCHAR(45)
 );
 
 CREATE TABLE kieu_thue (
-    ma_kieu_thue INT PRIMARY KEY,
+    ma_kieu_thue INT PRIMARY KEY AUTO_INCREMENT,
     ten_kieu_thue VARCHAR(45)
 );
+
 CREATE TABLE dich_vu (
     ma_dich_vu INT PRIMARY KEY,
     ten_dich_vu VARCHAR(45) NOT NULL,
@@ -107,11 +111,12 @@ CREATE TABLE dich_vu_di_kem (
 
 CREATE TABLE hop_dong_chi_tiet (
     ma_hop_dong_chi_tiet INT PRIMARY KEY,
+    so_lương INT NOT NULL,
     ma_hop_dong INT,
     ma_dich_vu_di_kem INT,
-    so_lương INT NOT NULL,
     FOREIGN KEY (ma_hop_dong)
         REFERENCES case_study.hop_dong (ma_hop_dong),
     FOREIGN KEY (ma_dich_vu_di_kem)
         REFERENCES case_study.dich_vu_di_kem (ma_dich_vu_di_kem)
 );
+
