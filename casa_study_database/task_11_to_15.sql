@@ -30,30 +30,32 @@ SELECT
     nv.ho_ten AS ho_ten_nhan_vien,
     kh.ho_ten AS ho_ten_khach_hang,
     kh.so_dien_thoai AS sdt_khach_hang,
-    dv.ma_dich_vu,
+    hd.ma_dich_vu,
     dv.ten_dich_vu,
-    IFNULL(SUM(ct.so_lương), 0) AS so_luong_dich_vu_di_kem,
-    hd.tien_dat_coc
+    hd.tien_dat_coc,
+    hd.ngay_lam_hop_dong,
+    ifnull(sum(ct.so_lương), 0) as 'số lượng'
 FROM
     khach_hang kh
-        JOIN
+         left JOIN
     hop_dong hd ON kh.ma_khach_hang = hd.ma_khach_hang
-        JOIN
+         left JOIN
     nhan_vien nv ON hd.ma_nhan_vien = nv.ma_nhan_vien
-        JOIN
+        left  JOIN
     dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu
-        JOIN
+        left  JOIN
     hop_dong_chi_tiet ct ON hd.ma_hop_dong = ct.ma_hop_dong
-        JOIN
+        left  JOIN
     dich_vu_di_kem dvdk ON ct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 WHERE
-    (DATE(hd.ngay_lam_hop_dong) BETWEEN '2020-10-01' AND '2020-12-31')
+    (MONTH(hd.ngay_lam_hop_dong) IN (10 , 11, 12))
         AND hd.ma_hop_dong NOT IN (SELECT 
             hd.ma_hop_dong
         FROM
             hop_dong hd
         WHERE
-            (DATE(hd.ngay_lam_hop_dong) BETWEEN '2021 - 01 - 01' AND '2021 - 06 - 30')) ;
+            (DATE(hd.ngay_lam_hop_dong) BETWEEN '2021 - 01 - 01' AND '2021 - 06 - 30'))
+            group by ma_hop_dong;
        
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
 -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
