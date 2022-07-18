@@ -98,7 +98,8 @@ VALUES  (1, '5', '2', '4'),
         (7, '2', '1', '2'),
         (8, '2', '12', '2');
 
-
+UPDATE `case_study`.`hop_dong` SET `ngay_lam_hop_dong` = '2021-06-17 00:00:00' WHERE (`ma_hop_dong` = '8');
+UPDATE `case_study`.`hop_dong` SET `ngay_lam_hop_dong` = '2021-06-17 00:00:00', `ngay_ket_thuc` = '2021-06-18 00:00:00' WHERE (`ma_hop_dong` = '8');
 
 
 
