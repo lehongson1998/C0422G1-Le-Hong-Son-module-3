@@ -96,7 +96,7 @@ WHERE
 SELECT 
     o.oId AS order_id,
     o.oDate AS order_date,
-    ord.odQTY * p.pPrice AS total_price
+    SUM(ord.odQTY * p.pPrice) AS total_price
 FROM
     customer c
         JOIN
@@ -106,7 +106,8 @@ FROM
         JOIN
     product p ON ord.pId = p.pId
 WHERE
-    ord.odQTY * p.pPrice IS NOT NULL;
+    ord.odQTY * p.pPrice IS NOT NULL
+GROUP BY o.oId;
 
 
 
