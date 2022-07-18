@@ -31,13 +31,13 @@ UPDATE `quanlysinhvien`.`mark` SET `Mark` = '11' WHERE (`MarkId` = '3');
 
 
 SELECT 
-    S.StudentId, S.StudentName, ifnull((m.Mark), 0) AS mark
+    S.StudentId, S.StudentName, IFNULL(AVG(m.Mark), 0) AS TB
 FROM
     Student S
         LEFT JOIN
     Mark M ON S.StudentId = M.StudentId
-GROUP BY S.StudentId , S.StudentName
-ORDER BY AVG(m.Mark) DESC;
+GROUP BY S.StudentId
+ORDER BY TB DESC;
 
 
 
