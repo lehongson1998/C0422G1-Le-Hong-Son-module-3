@@ -93,7 +93,8 @@ SELECT
     nv.dia_chi
 FROM
     nhan_vien nv
-UNION ALL SELECT 
+UNION ALL 
+SELECT 
     kh.ma_khach_hang,
     kh.ho_ten,
     kh.email,
