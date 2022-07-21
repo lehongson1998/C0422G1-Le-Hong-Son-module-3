@@ -88,7 +88,6 @@ CREATE TRIGGER tr_xoa_hd
 AFTER DELETE ON hop_dong
 FOR EACH ROW
 BEGIN
--- DECLARE so_luong INT;
 UPDATE so_luong_hop_dong SET so_luong = (SELECT 
     COUNT(*)
 FROM
