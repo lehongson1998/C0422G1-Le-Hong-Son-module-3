@@ -76,11 +76,10 @@ CALL add_hop_dong(17, '2020-12-08', '2020-12-08', '0', '3', '1', '100');
 -- thì hiển thị tổng số lượng bản ghi còn lại có trong bảng hop_dong ra giao diện console của database.
 
 CREATE TABLE so_luong_hop_dong (
-    id INT PRIMARY KEY,
-    so_luong INT
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    so_luong_hd_tai_thoi_diem_nay INT,
+    thoi_gian_cap_nhat DATETIME
 );
-INSERT INTO so_luong_hop_dong(id)
-VALUES(1);
 
 DROP TRIGGER IF EXISTS tr_xoa_hd;
 DELIMITER //
@@ -88,16 +87,20 @@ CREATE TRIGGER tr_xoa_hd
 AFTER DELETE ON hop_dong
 FOR EACH ROW
 BEGIN
-UPDATE so_luong_hop_dong SET so_luong = (SELECT 
-    COUNT(*)
-FROM
-     hop_dong) WHERE so_luong_hop_dong.id = 1;
+	DECLARE SL INT;
+    SELECT COUNT(ma_hop_dong) INTO SL
+    FROM hop_dong;
+	INSERT INTO so_luong_hop_dong(so_luong_hd_tai_thoi_diem_nay, thoi_gian_cap_nhat)
+    VALUES (SL,NOW());
 END //
 DELIMITER ;
 
 DELETE FROM hop_dong
 WHERE
 	ma_hop_dong = 15;
+
+SELECT COUNT(*) AS SL
+FROM hop_dong;    
     
 SELECT *
 FROM so_luong_hop_dong;
