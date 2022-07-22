@@ -1,0 +1,55 @@
+#menu{
+    background-color: lawngreen;
+    font-family: "Berlin Sans FB";
+    list-style-type: none;
+    text-align: center;
+    font-size: 25px;
+    position: sticky;
+    background-image: url("tieu_viem.jpg");
+}
+#menu .parent{
+    position: relative;
+}
+#menu li{
+    color: darkturquoise;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -5px;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: #e9d8f4;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#menu .parent:hover .submenu{
+    display: block;
+}
+.submenu a{
+    color: black;
+    padding: 1px 1px;
+    display: block;
+    list-style-type: circle;
+    width: 500px;
+    text-align: left;
+}
+.submenu a:hover{
+    background-color: #58257b;
+    color: white;
+}
+#menu a:hover{
+    background-color: powderblue;
+    color: indianred;
+}
+#dptk{
+    text-align: center;
+    color: white;
+}
+body{
+    background-image: url("dau_de.jpg");
+}

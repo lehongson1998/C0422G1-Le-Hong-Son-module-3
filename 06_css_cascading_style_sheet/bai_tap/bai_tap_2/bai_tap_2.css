@@ -1,0 +1,24 @@
+body{
+    background-color: white;
+}
+#e1{
+    font-size: 1.5em;
+}
+p{
+    text-indent: 50px;
+    width: 40%;
+    height: 100%;
+    text-align: justify;
+    font-size: 1em;
+}
+span{
+    color: blue;
+    border: 10px;
+}
+sup{
+    font-size: 0.7em;
+    color: blue;
+}
+h1{
+    font-size: 40px;
+}
