@@ -1,0 +1,23 @@
+.box{
+    border: 10px solid;
+    border-color: lawngreen dodgerblue blue blueviolet;
+    padding: 10px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.box p{
+    border: 3px dotted darkred;
+}
+
+.box__model1{
+    margin-bottom: 20px;
+}
+
+.box__model2{
+    margin-bottom: 40px;
+}
+
+.box__model3{
+    margin-bottom: 60px;
+}

@@ -1,0 +1,48 @@
+body {
+    font-family: Verdana,sans-serif;
+    font-size: 0.9em;
+}
+
+header, footer {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+section {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+article {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+
+:root{
+    --col-size: calc(100% /12);
+}
+
+.col-m-1{width: var(--col-size)}
+.col-m-2{width: calc(var(--col-size) * 2)}
+.col-m-3{width: calc(var(--col-size) * 3)}
+.col-m-4{width: calc(var(--col-size) * 4)}
+.col-m-5{width: calc(var(--col-size) * 5)}
+.col-m-6{width: calc(var(--col-size) * 6)}
+.col-m-7{width: calc(var(--col-size) * 7)}
+.col-m-8{width: calc(var(--col-size) * 8)}
+.col-m-9{width: calc(var(--col-size) * 9)}
+.col-m-10{width: calc(var(--col-size) * 10)}
+.col-m-11{width: calc(var(--col-size) * 11)}
+.col-m-12{width: calc(var(--col-size) * 12)}
