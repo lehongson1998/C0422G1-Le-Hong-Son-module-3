@@ -1,0 +1,80 @@
+.header{
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+body{
+    font-family: Arial;
+    width: 80%;
+    margin: auto;
+    background-color: #e1dfd8;
+}
+
+.menu{
+    background-color: #f5f5f5;
+    text-align: center;
+    margin-top: 10px ;
+    position: sticky;
+    top: 0px;
+}
+
+.menu li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-right: 3px solid #0c5d6da8;
+    margin: 4px 0;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu li:hover{
+    background-color: #a4d8e3;
+}
+
+.menu li:active{
+    background-color: #ea750c8a;
+    color: white;
+}
+
+.body-left{
+    background-color: #f5f5f5;
+    padding: 12px;
+}
+
+.body{
+    display: flex;
+}
+
+:root{
+    --col-size: calc(100% /12);
+}
+
+.col-m-1{width: var(--col-size)}
+.col-m-2{width: calc(var(--col-size) * 2)}
+.col-m-3{width: calc(var(--col-size) * 3)}
+.col-m-4{width: calc(var(--col-size) * 4)}
+.col-m-5{width: calc(var(--col-size) * 5)}
+.col-m-6{width: calc(var(--col-size) * 6)}
+.col-m-7{width: calc(var(--col-size) * 7)}
+.col-m-8{width: calc(var(--col-size) * 8)}
+.col-m-9{width: calc(var(--col-size) * 9)}
+.col-m-10{width: calc(var(--col-size) * 10)}
+.col-m-11{width: calc(var(--col-size) * 11)}
+.col-m-12{width: calc(var(--col-size) * 12)}
+
+.body-left img{
+    width: 300px;
+    height: 210px;
+}
+
+.body-right{
+    text-align: center;
+    padding: 15px;
+}
+
+.footer{
+    background-color: powderblue;
+}
