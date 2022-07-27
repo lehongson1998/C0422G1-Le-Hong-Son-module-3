@@ -1,0 +1,18 @@
+form{
+    display:flex;
+}
+
+label{
+    font-family: Arial;
+}
+
+body{
+    background-color: aqua;
+}
+
+.input{
+    width: 200px;
+    height: 50px;
+    border-radius: 25%;
+    background-color: burlywood;
+}

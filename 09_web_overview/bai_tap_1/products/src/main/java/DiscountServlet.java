@@ -18,15 +18,18 @@ public class DiscountServlet extends HttpServlet {
         float price = Float.parseFloat(request.getParameter("price"));
         float percent = Float.parseFloat(request.getParameter("Discount_Percent"));
 
-        float discount_Amount = price * percent * 0.01f;
-        float discount_price = price - discount_Amount;
+        float discountAmount = price * percent * 0.01f;
+        float discountPrice = price - discountAmount;
 
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
+        request.setAttribute("discountAmount",discountAmount);
+        request.setAttribute("discountPrice",discountPrice);
+        requestDispatcher.forward(request,response);
 
-
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println("<html>");
-        printWriter.println("<h1> Discount Amount: " + discount_Amount +"</h1>");
-        printWriter.println("<h1> Discount price: " + discount_price +"</h1>");
-        printWriter.println("</html>");
+//        PrintWriter printWriter = response.getWriter();
+//        printWriter.println("<html>");
+//        printWriter.println("<h1> Discount Amount: " + discount_Amount +"</h1>");
+//        printWriter.println("<h1> Discount price: " + discount_price +"</h1>");
+//        printWriter.println("</html>");
     }
 }
