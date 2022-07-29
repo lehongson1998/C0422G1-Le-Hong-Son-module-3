@@ -9,13 +9,13 @@ import java.util.List;
 
 public class ProductRepository implements IProductRepository {
     private static List<Products> productsList = new ArrayList<>();
-    private final static String IPHONE_13_PRM = "1" ;
-    private final static String IPHONE_12_PRM = "2" ;
-    private final static String IPHONE_11_PRM = "3" ;
-    private final static String IPHONE_XSM = "4" ;
-    private final static String GALAXY_NOTE_10 = "5" ;
-    private final static String GALAXY_S10 = "6" ;
-    private final static String GALAXY_S20 = "6" ;
+    private final static String IPHONE_13_PRM = "image/ip13prm.jpg" ;
+    private final static String IPHONE_12_PRM = "image/ip12prm.jpg" ;
+    private final static String IPHONE_11_PRM = "image/ip11prm.jpg" ;
+    private final static String IPHONE_XSM = "image/ipxsm.jpg" ;
+    private final static String GALAXY_NOTE_10 = "image/galaxynote10.jpg" ;
+    private final static String GALAXY_S10 = "image/galaxys10.jpg" ;
+    private final static String GALAXY_S20 = "image/galaxys20.jpg" ;
     static {
         productsList.add(new Products(1, "iphone 13 promax", 1600, "Apple", IPHONE_13_PRM));
         productsList.add(new Products(2, "iphone 12 promax", 1200, "Apple", IPHONE_12_PRM));

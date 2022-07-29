@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td>image: </td>
-                <td>${requestScope["products"].getImage()}</td>
+                <td><img src="${requestScope["products"].getImage()}" style="width: 50px; height: 30px;"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="DeleteProduct"></td>

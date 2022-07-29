@@ -29,7 +29,7 @@
     </tr>
     <tr>
         <td>Image: </td>
-        <td>${requestScope["products"].getImage()}</td>
+        <td><img src="${requestScope["products"].getImage()}" style="width: 50px; height: 30px;"></td>
     </tr>
 </table>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
