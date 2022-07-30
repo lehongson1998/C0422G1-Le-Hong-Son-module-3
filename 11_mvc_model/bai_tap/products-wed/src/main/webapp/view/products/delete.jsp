@@ -8,6 +8,9 @@
         .margin-son{
             margin-left: 40%;
         }
+        a{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -42,15 +45,19 @@
                     <td><img src="${products.image}" style="width: 50px; height: 65px;"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="DeleteProduct"></td>
-                    <td><a href="/product">Back to product list</a></td>
+                    <td><input type="submit" value="DeleteProduct" class="bg-danger text-light"></td>
+                    <td><span class="border bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product" class="text-light">Cancel and Back</a></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <c:if test='${message != null}'>
+                            <h5 class="message">${message}</h5>
+                        </c:if>
+                    </td>
                 </tr>
             </table>
         </fieldset>
     </form>
-    <c:if test='${message != null}'>
-        <h3 class="message">${message}</h3>
-    </c:if>
 </div>
 
 

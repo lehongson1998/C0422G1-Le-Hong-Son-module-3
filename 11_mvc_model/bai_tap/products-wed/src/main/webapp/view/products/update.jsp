@@ -8,15 +8,17 @@
         .margin-son{
             margin-left: 40%;
         }
+        .message{
+            color: chartreuse;
+        }
+        a{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
-<p>
-    <c:if test='${message != null}'>
-        <span class="message">${message}</span>
-    </c:if>
-</p>
+
 <div class="container margin-son">
     <form method="post">
     <fieldset>
@@ -55,10 +57,17 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="submit" value="editProduct"></td>
+                <td>
+                    <input type="submit" value="editProduct" class="bg-success text-light">
+                    <span class="border bg-danger bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product" class="text-light">Cancel and Back</a></span>
+                </td>
             </tr>
             <tr>
-                <td><a href="/product">Back to product list</a></td>
+                <td>
+                    <c:if test='${message != null}'>
+                        <h5 class="message">${message}</h5>
+                    </c:if>
+                </td>
             </tr>
         </table>
     </fieldset>

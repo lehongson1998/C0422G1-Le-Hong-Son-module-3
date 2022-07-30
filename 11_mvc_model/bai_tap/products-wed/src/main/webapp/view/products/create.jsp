@@ -65,19 +65,21 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Create" class="bg-success text-light"></td>
+                    <td>
+                        <input type="submit" value="Create" class="bg-success text-light">
+                        <span class="border bg-danger bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product" class="text-light">Cancel and Back</a></span>
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="/product">Back to product list</a></td>
+                    <td>
+                        <c:if test='${message != null}'>
+                            <h5 class="message">${message}</h5>
+                        </c:if>
+                    </td>
                 </tr>
             </table>
         </fieldset>
     </form>
-    <p>
-        <c:if test='${message != null}'>
-            <h3 class="message">${message}</h3>
-        </c:if>
-    </p>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

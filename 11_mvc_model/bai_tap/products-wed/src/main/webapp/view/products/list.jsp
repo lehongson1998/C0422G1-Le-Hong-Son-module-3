@@ -10,44 +10,46 @@
         }
     </style>
 </head>
-
 <body>
-<div class="container">
-    <form method="post" action="/product?action=search">
-    <div class="input-group mb-3 col-md-6">
-        <input type="text" name="search" placeholder="search" class="form-control">
-        <input type="submit" value="search" class="btn btn-outline-success bg-info">
-    </div>
-</form>
-</div>
 <div class="container text-center">
 <h1>Products</h1>
 <p>
-    <a href="/product?action=create">Create new product</a>
+    <span class="border bg-secondary bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=create" class="text-light">Create new product</a></span>
 </p>
     <c:if test="${products != null}">
         <table border="1" class="table pd-3">
-    <tr class="bg-primary bg-gradient">
-        <td>Id</td>
-        <td>Name</td>
-        <td>Price</td>
-        <td>Produce</td>
-        <td>Image</td>
-        <td>Edit</td>
-        <td>Delete</td>
-    </tr>
-    <c:forEach var="product" items='${products}'>
-        <tr class="table-secondary align-middle">
-            <td><a href="/product?action=view&id=${product.id}">${product.id}</a></td>
-            <td>${product.name}</td>
-            <td>${product.price}</td>
-            <td>${product.produce}</td>
-            <td><img src="${product.image}" style="width: 40px; height: 50px;"></td>
-            <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=edit&id=${product.id}" class="text-light">edit</a></span></td>
-            <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=delete&id=${product.id}" class="text-light">delete</a></span></td>
-        </tr>
-    </c:forEach>
-</table>
+            <tr>
+                <th colspan="3" class="text-center">
+                </th>
+                <th colspan="4">
+                    <form method="post" action="/product?action=search">
+                        <div class="input-group mb-3 col-md-6">
+                            <input type="text" name="search" placeholder="search" class="form-control">
+                            <input type="submit" value="search" class="btn btn-outline-success bg-info">
+                        </div>
+                </th>
+            </tr>
+            <tr class="bg-primary bg-gradient">
+                <td>Id</td>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Produce</td>
+                <td>Image</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+            <c:forEach var="product" items='${products}'>
+                <tr class="table-secondary align-middle">
+                    <td><a href="/product?action=view&id=${product.id}">${product.id}</a></td>
+                    <td>${product.name}</td>
+                    <td>${product.price}</td>
+                    <td>${product.produce}</td>
+                    <td><img src="${product.image}" style="width: 40px; height: 50px;"></td>
+                    <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=edit&id=${product.id}" class="text-light">edit</a></span></td>
+                    <td><span class="border border-5 bg-danger bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=delete&id=${product.id}" class="text-light">delete</a></span></td>
+                </tr>
+            </c:forEach>
+        </table>
     </c:if>
 </div>
 
@@ -70,13 +72,13 @@
                     <td>${product.price}</td>
                     <td>${product.produce}</td>
                     <td><img src="${product.image}" style="width: 50px; height: 65px;"></td>
-                    <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=edit&id=${product.id}" class="text-light">edit</a></span></td>
-                    <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=delete&id=${product.id}" class="text-light">delete</a></span></td>
+                    <td><span class="border bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=edit&id=${product.id}" class="text-light">edit</a></span></td>
+                    <td><span class="border bg-danger bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=delete&id=${product.id}" class="text-light">delete</a></span></td>
                 </tr>
             </c:forEach>
         </table>
         <p>
-            <a href="/product">Back to customer list</a>
+            <span class="border bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product" class="text-light">Back to products list</a></span>
         </p>
     </div>
 </c:if>
