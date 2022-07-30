@@ -46,14 +46,14 @@ public class ProductServlet extends HttpServlet {
 
     private void findByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String search = request.getParameter("search");
-        Products products = this.productServices.findByNameProduct(search);
+        List<Products> productsListSearch = this.productServices.findByNameProduct(search);
         RequestDispatcher dispatcher;
-        if(products == null){
+        if(productsListSearch.size() == 0){
             dispatcher = request.getRequestDispatcher("view/products/error404.jsp");
             request.setAttribute("error", "products not found");
         } else {
-            request.setAttribute("products", products);
-            dispatcher = request.getRequestDispatcher("view/products/display.jsp");
+            request.setAttribute("productsListSearch", productsListSearch);
+            dispatcher = request.getRequestDispatcher("view/products/list.jsp");
         }
         try {
             dispatcher.forward(request, response);

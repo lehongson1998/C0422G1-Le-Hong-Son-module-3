@@ -18,23 +18,23 @@
         <table>
             <tr>
                 <td>Id: </td>
-                <td>${requestScope["products"].getId()}</td>
+                <td>${products.id}</td>
             </tr>
             <tr>
                 <td>Name: </td>
-                <td>${requestScope["products"].getName()}</td>
+                <td>${products.name}</td>
             </tr>
             <tr>
                 <td>Price: </td>
-                <td>${requestScope["products"].getPrice()}</td>
+                <td>${products.price}</td>
             </tr>
             <tr>
                 <td>Produce: </td>
-                <td>${requestScope["products"].getProduce()}</td>
+                <td>${products.produce}</td>
             </tr>
             <tr>
                 <td>image: </td>
-                <td><img src="${requestScope["products"].getImage()}" style="width: 50px; height: 30px;"></td>
+                <td><img src="${products.image}" style="width: 50px; height: 30px;"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="DeleteProduct"></td>
@@ -43,8 +43,8 @@
         </table>
     </fieldset>
 </form>
-<c:if test='${requestScope["message"] != null}'>
-    <h3 class="message">${requestScope["message"]}</h3>
+<c:if test='${message != null}'>
+    <h3 class="message">${message}</h3>
 </c:if>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

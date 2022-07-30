@@ -11,5 +11,5 @@ public interface IProductRepository {
     Products findById(int id);
     void update(int id, String name, double price, String produce, String image);
     void remove(int id);
-    Products findByNameProduct(String name);
+    List<Products> findByNameProduct(String name);
 }

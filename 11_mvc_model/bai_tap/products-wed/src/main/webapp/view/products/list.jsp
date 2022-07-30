@@ -20,8 +20,9 @@
 <p>
     <a href="/product?action=create">Create new product</a>
 </p>
-    <table border="1" class="table pd-3">
-    <tr class="bg-primary">
+    <c:if test="${products != null}">
+        <table border="1" class="table pd-3">
+    <tr class="bg-primary bg-gradient">
         <td>Id</td>
         <td>Name</td>
         <td>Price</td>
@@ -30,19 +31,50 @@
         <td>Edit</td>
         <td>Delete</td>
     </tr>
-    <c:forEach var="product" items='${requestScope["products"]}'>
+    <c:forEach var="product" items='${products}'>
         <tr class="table-secondary align-middle">
-            <td><a href="/product?action=view&id=${product.getId()}">${product.getId()}</a></td>
-            <td>${product.getName()}</td>
-            <td>${product.getPrice()}</td>
-            <td>${product.getProduce()}</td>
-            <td><img src="${product.getImage()}" style="width: 40px; height: 50px;"></td>
-            <td><span class="border border-5 bg-success" style="padding: 5px 10px"><a href="/product?action=edit&id=${product.getId()}" class="text-light">edit</a></span></td>
-            <td><span class="border border-5 bg-success" style="padding: 5px 10px"><a href="/product?action=delete&id=${product.getId()}" class="text-light">delete</a></span></td>
+            <td><a href="/product?action=view&id=${product.id}">${product.id}</a></td>
+            <td>${product.name}</td>
+            <td>${product.price}</td>
+            <td>${product.produce}</td>
+            <td><img src="${product.image}" style="width: 40px; height: 50px;"></td>
+            <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=edit&id=${product.id}" class="text-light">edit</a></span></td>
+            <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=delete&id=${product.id}" class="text-light">delete</a></span></td>
         </tr>
     </c:forEach>
 </table>
+    </c:if>
 </div>
+
+<c:if test="${productsListSearch != null}">
+    <div class="container text-center">
+        <table border="1" class="table pd-3">
+            <tr class="bg-primary bg-gradient">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Produce</th>
+                <th>Image</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <c:forEach var="product" items='${productsListSearch}'>
+                <tr class="table-secondary align-middle">
+                    <td><a href="/product?action=view&id=${product.id}">${product.id}</a></td>
+                    <td>${product.name}</td>
+                    <td>${product.price}</td>
+                    <td>${product.produce}</td>
+                    <td><img src="${product.image}" style="width: 50px; height: 65px;"></td>
+                    <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=edit&id=${product.id}" class="text-light">edit</a></span></td>
+                    <td><span class="border border-5 bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product?action=delete&id=${product.id}" class="text-light">delete</a></span></td>
+                </tr>
+            </c:forEach>
+        </table>
+        <p>
+            <a href="/product">Back to customer list</a>
+        </p>
+    </div>
+</c:if>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
