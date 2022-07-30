@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0603dcd1-98f9-425f-b68f-c98c597089c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/image/galaxynote10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/image/galaxys10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/image/galaxys20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/image/ip11prm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/image/ip12prm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/image/ip13prm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/image/ipxsm.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/css/manga_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/css/manga_css.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/dptk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/dptk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/gia_nam_hoc_vien.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/gia_nam_hoc_vien.html" afterDir="false" />
@@ -27,12 +34,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/repository/impl/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/products-wed-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/products-wed-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/delete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/display.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/view.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/TranslationServlet.class" beforeDir="false" />
@@ -212,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659076231188</updated>
-      <workItem from="1659076232929" duration="30138000" />
+      <workItem from="1659076232929" duration="35745000" />
     </task>
     <servers />
   </component>
