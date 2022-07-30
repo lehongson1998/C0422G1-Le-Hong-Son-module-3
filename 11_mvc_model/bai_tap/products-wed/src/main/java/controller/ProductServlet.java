@@ -169,10 +169,15 @@ public class ProductServlet extends HttpServlet {
         double price = Double.parseDouble(request.getParameter("price"));
         String produce = request.getParameter("produce");
         String image = request.getParameter("image");
-
-        productServices.update(id, name, price, produce, image);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/products/update.jsp");
-        request.setAttribute("message", "edit success");
+        RequestDispatcher requestDispatcher;
+        if ((name != "") || (price > 0) || (produce != "") || (image != "")){
+            productServices.update(id, name, price, produce, image);
+            requestDispatcher = request.getRequestDispatcher("view/products/update.jsp");
+            request.setAttribute("message", "edit success");
+        }else {
+            requestDispatcher = request.getRequestDispatcher("view/products/error404.jsp");
+            request.setAttribute("error", "cancel edit");
+        }
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -188,10 +193,17 @@ public class ProductServlet extends HttpServlet {
         double price = Double.parseDouble(request.getParameter("price"));
         String produce = request.getParameter("produce");
         String image = request.getParameter("image");
-        Products products = new Products(id, name, price, produce, image);
-        productServices.save(products);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/products/create.jsp");
-        request.setAttribute("message", "create new products success!");
+        RequestDispatcher dispatcher;
+        if ((id != 0) && (name != "") && (price != 0) && (produce != "") && (image != "")) {
+            Products products = new Products(id, name, price, produce, image);
+            productServices.save(products);
+            dispatcher = request.getRequestDispatcher("view/products/create.jsp");
+            request.setAttribute("message", "create new products success!");
+        }
+        else {
+            dispatcher = request.getRequestDispatcher("view/products/error404.jsp");
+            request.setAttribute("error", "product can not create");
+        }
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {

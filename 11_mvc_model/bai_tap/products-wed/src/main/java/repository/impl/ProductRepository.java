@@ -50,10 +50,30 @@ public class ProductRepository implements IProductRepository {
     public void update(int id, String name, double price, String produce, String image) {
         for (int i = 0; i < productsList.size(); i++) {
             if (id == productsList.get(i).getId()){
-                productsList.get(i).setName(name);
-                productsList.get(i).setPrice(price);
-                productsList.get(i).setProduce(produce);
-                productsList.get(i).setImage(image);
+                if (name != ""){
+                    productsList.get(i).setName(name);
+                }
+                else {
+                    productsList.get(i).setName(productsList.get(i).getName());
+                }
+                if (price > 0){
+                    productsList.get(i).setPrice(price);
+                }
+                else {
+                    productsList.get(i).setPrice(productsList.get(i).getPrice());
+                }
+                if (produce != ""){
+                    productsList.get(i).setProduce(produce);
+                }
+                else {
+                    productsList.get(i).setProduce(productsList.get(i).getProduce());
+                }
+                if (image != ""){
+                    productsList.get(i).setImage(image);
+                }
+                else {
+                    productsList.get(i).setImage(productsList.get(i).getImage());
+                }
             }
         }
     }

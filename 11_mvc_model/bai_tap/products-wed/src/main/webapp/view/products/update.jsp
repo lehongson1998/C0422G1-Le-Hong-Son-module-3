@@ -4,18 +4,23 @@
 <head>
     <title>edit product by Id</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <style>
+        .margin-son{
+            margin-left: 40%;
+        }
+    </style>
 </head>
-<body class="container">
-<h1>Edit product</h1>
+<body>
+
 <p>
-    <c:if test='${requestScope["message"] != null}'>
-        <span class="message">${requestScope["message"]}</span>
+    <c:if test='${message != null}'>
+        <span class="message">${message}</span>
     </c:if>
 </p>
-<div>
+<div class="container margin-son">
     <form method="post">
     <fieldset>
+        <h1>Edit product</h1>
         <table>
             <tr>
                 <td>
@@ -29,7 +34,7 @@
                 <td>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text">Price</span>
-                        <input type="text" name="price" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        <input type="number" name="price" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                     </div>
                 </td>
             </tr>

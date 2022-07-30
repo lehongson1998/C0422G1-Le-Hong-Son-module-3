@@ -13,23 +13,23 @@
 <table class="table align-middle col-lg-6">
     <tr class="bg-success">
         <td>id: </td>
-        <td>${requestScope["products"].getId()}</td>
+        <td>${products.id}</td>
     </tr>
     <tr class="bg-primary">
         <td>Name: </td>
-        <td>${requestScope["products"].getName()}</td>
+        <td>${products.name}</td>
     </tr>
     <tr class="bg-danger">
         <td>Price: </td>
-        <td>${requestScope["products"].getPrice()}</td>
+        <td>${products.price}</td>
     </tr>
     <tr class="bg-info">
         <td>Produce: </td>
-        <td>${requestScope["products"].getProduce()}</td>
+        <td>${products.produce}</td>
     </tr>
     <tr class="bg-secondary">
         <td>Image: </td>
-        <td><img src="${requestScope["products"].getImage()}" style="width: 60px; height: 70px;"></td>
+        <td><img src="${products.image}" style="width: 60px; height: 70px;"></td>
     </tr>
 </table>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
