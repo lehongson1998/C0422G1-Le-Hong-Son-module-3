@@ -67,20 +67,25 @@
                 <tr>
                     <td>
                         <input type="submit" value="Create" class="bg-success text-light">
-                        <span class="border bg-danger bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product" class="text-light">Cancel and Back</a></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <c:if test='${message != null}'>
-                            <h5 class="message">${message}</h5>
-                        </c:if>
+                        <span class="border bg-danger bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product" class="text-light">Back to home</a></span>
                     </td>
                 </tr>
             </table>
         </fieldset>
     </form>
 </div>
+<div class="container">
+    <c:if test='${message != null}'>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            <h5>${message}</h5>
+        </div>
+    </c:if>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>

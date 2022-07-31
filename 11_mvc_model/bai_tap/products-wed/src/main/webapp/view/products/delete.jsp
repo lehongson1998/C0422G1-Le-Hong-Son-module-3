@@ -16,9 +16,6 @@
 <body>
 <div class="container margin-son">
     <h1>Delete product</h1>
-    <p>
-        <a href="/product">Back to product list</a>
-    </p>
     <form method="post">
         <h3>Are you sure?</h3>
         <fieldset>
@@ -45,22 +42,49 @@
                     <td><img src="${products.image}" style="width: 50px; height: 65px;"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="DeleteProduct" class="bg-danger text-light"></td>
-                    <td><span class="border bg-success bg-gradient" style="padding: 5px 10px; border-radius: 5px;"><a href="/product" class="text-light">Cancel and Back</a></span></td>
-                </tr>
-                <tr>
                     <td>
-                        <c:if test='${message != null}'>
-                            <h5 class="message">${message}</h5>
-                        </c:if>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Delete products
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            if deleted product data will be permanently deleted from the database!
+                                            you still want to delete.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Delete</button>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
                     </td>
+                    <td><button type="button" class="btn btn-primary"><a href="/product" class="text-light">Back to Home</a></button></td>
                 </tr>
             </table>
         </fieldset>
     </form>
 </div>
-
-
+<div class="container">
+    <c:if test='${message != null}'>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            <h5>${message}</h5>
+        </div>
+    </c:if>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
