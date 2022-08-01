@@ -2,10 +2,10 @@ package repository.impl;
 
 import model.Products;
 import repository.IProductRepository;
-import unit.ProductNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ProductRepository implements IProductRepository {
     private static List<Products> productsList = new ArrayList<>();
@@ -17,13 +17,13 @@ public class ProductRepository implements IProductRepository {
     private final static String GALAXY_S10 = "image/galaxys10.jpg" ;
     private final static String GALAXY_S20 = "image/galaxys20.jpg" ;
     static {
-        productsList.add(new Products(1, "iphone 13 promax", 1600, "Apple", IPHONE_13_PRM));
-        productsList.add(new Products(2, "iphone 12 promax", 1200, "Apple", IPHONE_12_PRM));
-        productsList.add(new Products(3, "iphone 11 promax", 1000, "Apple", IPHONE_11_PRM));
-        productsList.add(new Products(4, "iphone xs max", 600, "Apple", IPHONE_XSM));
-        productsList.add(new Products(5, "galaxy note 10", 800, "Samsung", GALAXY_NOTE_10));
-        productsList.add(new Products(6, "galaxy s10", 500, "Samsung", GALAXY_S10));
-        productsList.add(new Products(7, "galaxy s20 ultra", 1500, "Samsung", GALAXY_S20));
+        productsList.add(new Products(1, "Iphone 13 promax", 1600, "Apple", IPHONE_13_PRM));
+        productsList.add(new Products(2, "Iphone 12 promax", 1200, "Apple", IPHONE_12_PRM));
+        productsList.add(new Products(3, "Iphone 11 promax", 1000, "Apple", IPHONE_11_PRM));
+        productsList.add(new Products(4, "Iphone xs max", 600, "Apple", IPHONE_XSM));
+        productsList.add(new Products(5, "Galaxy note 10", 800, "Samsung", GALAXY_NOTE_10));
+        productsList.add(new Products(6, "Galaxy s10", 500, "Samsung", GALAXY_S10));
+        productsList.add(new Products(7, "Galaxy s20 ultra", 1500, "Samsung", GALAXY_S20));
     }
 
     @Override
@@ -91,7 +91,7 @@ public class ProductRepository implements IProductRepository {
     public List<Products> findByNameProduct(String name) {
         List<Products> productsListSearch = new ArrayList<>();
         for (int i = 0; i < productsList.size(); i++) {
-            if (productsList.get(i).getName().contains(name)){
+            if (productsList.get(i).getName().toLowerCase().contains(name.toLowerCase())){
                 productsListSearch.add(productsList.get(i));
             }
         }

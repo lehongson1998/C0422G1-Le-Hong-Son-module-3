@@ -194,7 +194,7 @@ public class ProductServlet extends HttpServlet {
         String produce = request.getParameter("produce");
         String image = request.getParameter("image");
         RequestDispatcher dispatcher;
-        if ((id != 0) && (name != "") && (price != 0) && (produce != "") && (image != "")) {
+        if ((id > 0) && (name != "") && (price > 0) && (produce != "") && (image != "")) {
             Products products = new Products(id, name, price, produce, image);
             productServices.save(products);
             dispatcher = request.getRequestDispatcher("view/products/create.jsp");

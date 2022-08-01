@@ -27,11 +27,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/repository/impl/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/products-wed-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/products-wed-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/delete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/error404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/error404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/TranslationServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" afterDir="false" />
@@ -210,7 +212,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659076231188</updated>
-      <workItem from="1659076232929" duration="62989000" />
+      <workItem from="1659076232929" duration="68405000" />
     </task>
     <servers />
   </component>
