@@ -47,8 +47,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public void insertUserStore(User user) throws SQLException {
-        userRepository.insertUserStore(user);
+    public boolean insertUserStore(User user) throws SQLException {
+        return userRepository.insertUserStore(user);
     }
 
     @Override

@@ -20,9 +20,7 @@ public class UserRepository implements IUserRepository {
     private static final String SORT_BY_NAME = "CALL sort_by_name();";
     private static final String SORT_BY_COUNTRY = "CALL sort_by_country();";
     private static final String SQL_INSERT = "INSERT INTO EMPLOYEE (NAME, SALARY, CREATED_DATE) VALUES (?,?,?)";
-
     private static final String SQL_UPDATE = "UPDATE EMPLOYEE SET SALARY=? WHERE NAME=?";
-
     private static final String SQL_TABLE_CREATE = "CREATE TABLE EMPLOYEE"
 
             + "("
@@ -38,9 +36,7 @@ public class UserRepository implements IUserRepository {
             + " PRIMARY KEY (ID)"
 
             + ")";
-
     private static final String SQL_TABLE_DROP = "DROP TABLE IF EXISTS EMPLOYEE";
-
 
     @Override
     public List<User> selectAllUsers() {
@@ -176,7 +172,7 @@ public class UserRepository implements IUserRepository {
     }
 
     @Override
-    public void insertUserStore(User user) throws SQLException {
+    public boolean insertUserStore(User user) throws SQLException {
         String query = "{CALL insert_user(?,?,?)}";
         Connection connection = DatabaseConnect.getConnectDB();
         int rowAffected = 0;
@@ -192,6 +188,7 @@ public class UserRepository implements IUserRepository {
             }
              if (rowAffected == 1){
                  connection.commit();
+                 return true;
              }else {
                  connection.rollback();
              }
@@ -199,6 +196,7 @@ public class UserRepository implements IUserRepository {
            connection.rollback();
            e.printStackTrace();
         }
+        return false;
     }
 
     @Override

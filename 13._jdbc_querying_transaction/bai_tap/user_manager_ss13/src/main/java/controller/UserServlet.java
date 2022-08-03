@@ -62,6 +62,34 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        try {
+            switch (action) {
+                case "create":
+                    insertUser(request, response);
+                    break;
+                case "edit":
+                    updateUser(request, response);
+                    break;
+                case "search":
+                    findByCountry(request, response);
+                    break;
+                case "delete":
+                    deleteUser(request, response);
+                    break;
+            }
+        } catch (SQLException ex) {
+            throw new ServletException(ex);
+        }
+    }
+
     private void sortByCountry(HttpServletRequest request, HttpServletResponse response) {
         List<User> listUser = userService.sortByCountry();
         request.setAttribute("listUser", listUser);
@@ -104,34 +132,6 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html; charset=UTF-8");
-        request.setCharacterEncoding("UTF-8");
-        String action = request.getParameter("action");
-        if (action == null) {
-            action = "";
-        }
-        try {
-            switch (action) {
-                case "create":
-                    insertUser(request, response);
-                    break;
-                case "edit":
-                    updateUser(request, response);
-                    break;
-                case "search":
-                    findByCountry(request, response);
-                    break;
-                case "delete":
-                    deleteUser(request, response);
-                    break;
-            }
-        } catch (SQLException ex) {
-            throw new ServletException(ex);
         }
     }
 
@@ -181,7 +181,13 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        userService.insertUserStore(newUser);
+        boolean flag = userService.insertUserStore(newUser);
+        if (flag){
+            request.setAttribute("message", "insert success");
+        }
+        else{
+            request.setAttribute("message", "insert error");
+        }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/create.jsp");
         dispatcher.forward(request, response);
     }
