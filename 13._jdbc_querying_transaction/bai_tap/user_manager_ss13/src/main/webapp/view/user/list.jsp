@@ -15,11 +15,11 @@
     <button type="button" onclick="location.href='/user?action=sort_by_name'">Sort by name</button>
     <button type="button" onclick="location.href='/user?action=sort_by_country'">Sort by country</button>
 </center>
-<div align="center">
-        <table border="1" cellpadding="5">
+<div align="center" class="container mt-5">
+        <table border="1" cellpadding="5" class="table table-success">
         <caption><h2>List of Users</h2></caption>
         <tr>
-            <th colspan="2"></th>
+            <th colspan="2"><a href="/user">Home</a></th>
             <th colspan="3">
                 <form method="post" action="/user?action=search">
                     <input type="text" name="country" placeholder="search">
@@ -41,7 +41,10 @@
                 <td>${user.email}</td>
                 <td>${user.country}</td>
                 <td>
-                    <a href="/user?action=edit&id=${user.id}">Edit</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="/user?action=edit&id=${user.id}" class="text-light" style="text-decoration: none">Edit</a>
+                    </button>
+
                     <button onclick="showInfoDelete('${user.id}','${user.name}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Delete
                     </button>
@@ -82,36 +85,6 @@
         document.getElementById("deleteName").innerText = name;
     }
 </script>
-<div align="center">
-    <c:if test="${findCountry != null}">
-        <table border="1">
-            <tr>
-                <th>Id</th>
-                <th>name</th>
-                <th>Email</th>
-                <th>Country</th>
-                <th>Action</th>
-            </tr>
-            <c:forEach var="users" items="${findCountry}">
-                <tr>
-                    <td><a href="/user?action=view&id=${users.id}">${users.id}</a></td>
-                    <td>${users.name}</td>
-                    <td>${users.email}</td>
-                    <td>${users.country}</td>
-                    <td>
-                        <a href="/user?action=edit&id=${users.id}">Edit</a>
-                        <a href="/user?action=delete&id=${users.id}">Delete</a>
-                    </td>
-                </tr>
-            </c:forEach>
-            <tr>
-                <td>
-                    <a href="/user">Back</a>
-                </td>
-            </tr>
-        </table>
-    </c:if>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>

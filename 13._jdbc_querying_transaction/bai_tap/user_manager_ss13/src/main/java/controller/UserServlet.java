@@ -143,7 +143,7 @@ public class UserServlet extends HttpServlet {
             request.setAttribute("error", "not found");
             dispatcher = request.getRequestDispatcher("view/user/error404.jsp");
         }else {
-            request.setAttribute("findCountry", userList);
+            request.setAttribute("listUser", userList);
             dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         }
         try {
