@@ -4,10 +4,7 @@ import connect.DatabaseConnect;
 import model.User;
 import Repository.IUserRepository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -99,7 +96,7 @@ public class UserRepository implements IUserRepository {
         try {
             Connection connection = DatabaseConnect.getConnectDB();
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_COUNTRY);
-            preparedStatement.setString(1, "%" + country + "%");
+            preparedStatement.setString(1, '%' + country + '%');
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt("id");
@@ -133,5 +130,62 @@ public class UserRepository implements IUserRepository {
             throwables.printStackTrace();
         }
         return userList;
+    }
+
+    @Override
+    public void addUserTransaction(User user, int[] permisions) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        PreparedStatement pstmtAssignment = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DatabaseConnect.getConnectDB();
+            conn.setAutoCommit(false);
+            pstmt = conn.prepareStatement(INSERT_INTO, Statement.RETURN_GENERATED_KEYS);
+            pstmt.setString(1, user.getName());
+            pstmt.setString(2, user.getEmail());
+            pstmt.setString(3, user.getCountry());
+            int rowAffected = pstmt.executeUpdate();
+            rs = pstmt.getGeneratedKeys();
+            int userId = 0;
+            if (rs.next())
+                userId = rs.getInt(1);
+            if (rowAffected == 1) {
+                String sqlPivot = "INSERT INTO user_permision(user_id,permision_id) VALUES (?,?)";
+
+                pstmtAssignment = conn.prepareStatement(sqlPivot);
+
+                for (int permisionId : permisions) {
+                    pstmtAssignment.setInt(1, userId);
+                    pstmtAssignment.setInt(2, permisionId);
+                    pstmtAssignment.executeUpdate();
+                }
+                conn.commit();
+            } else {
+                conn.rollback();
+            }
+        } catch (SQLException ex) {
+            try {
+                if (conn != null)
+                    conn.rollback();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                if (rs != null) rs.close();
+
+                if (pstmt != null) pstmt.close();
+
+                if (pstmtAssignment != null) pstmtAssignment.close();
+
+                if (conn != null) conn.close();
+
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }

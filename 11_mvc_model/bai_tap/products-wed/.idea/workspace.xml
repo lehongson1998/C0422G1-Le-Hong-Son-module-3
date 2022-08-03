@@ -5,6 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0603dcd1-98f9-425f-b68f-c98c597089c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/service/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/service/impl/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/src/main/webapp/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/src/main/webapp/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh/user-manager/src/main/webapp/user/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/css/manga_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/css/manga_css.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/dptk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/dptk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/gia_nam_hoc_vien.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/gia_nam_hoc_vien.html" afterDir="false" />
@@ -26,6 +40,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/repository/impl/ProductRepository.class" afterDir="false" />
@@ -33,8 +48,7 @@
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/products/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/products/delete.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/TranslationServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/model/customer/customer.class" beforeDir="false" />
@@ -111,6 +125,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../12_jdbc_crud/thuc_hanh" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
@@ -212,7 +227,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659076231188</updated>
-      <workItem from="1659076232929" duration="68405000" />
+      <workItem from="1659076232929" duration="72924000" />
+      <workItem from="1659337158943" duration="2816000" />
     </task>
     <servers />
   </component>
@@ -229,6 +245,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

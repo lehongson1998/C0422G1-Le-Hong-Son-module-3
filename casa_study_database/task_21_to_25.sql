@@ -20,7 +20,7 @@ CREATE VIEW v_nhan_vien AS
             JOIN
         nhan_vien nv ON hd.ma_nhan_vien = nv.ma_nhan_vien
     WHERE
-        nv.dia_chi LIKE '22 Yên Bái%'
+        nv.dia_chi LIKE '% Yên Bái%'
             AND hd.ngay_lam_hop_dong = '2021-04-25';
             
 SELECT 

@@ -14,7 +14,8 @@
     </style>
 </head>
 <body>
-<div class="container margin-son">
+<c:if test="${products != null}">
+    <div class="container margin-son">
     <h1>Delete product</h1>
     <form method="post">
         <h3>Are you sure?</h3>
@@ -73,6 +74,7 @@
         </fieldset>
     </form>
 </div>
+</c:if>
 <div class="container">
     <c:if test='${message != null}'>
         <div class="alert alert-success" role="alert">
@@ -81,6 +83,7 @@
             <hr>
             <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
             <h5>${message}</h5>
+            <button type="button" class="btn btn-primary"><a href="/product" class="text-light">Back to Home</a></button>
         </div>
     </c:if>
 </div>

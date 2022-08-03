@@ -5,7 +5,9 @@
     text-align: center;
     font-size: 25px;
     position: sticky;
-    background-image: url("tieu_viem.jpg");
+    background-image: url("../image/tieu_viem.jpg");
+    top: 20px;
+    left: 25px;
 }
 #menu .parent{
     position: relative;
@@ -13,7 +15,7 @@
 #menu li{
     color: darkturquoise;
     display: inline-block;
-    width: 200px;
+    width: 275px;
     height: 40px;
     line-height: 40px;
     margin-left: -5px;
@@ -53,6 +55,6 @@
     color: white;
 }
 body{
-    background-image: url("dau_de.jpg");
+    background-image: url("../image/dau_de.jpg");
     background-size: 100%, 100%;
 }

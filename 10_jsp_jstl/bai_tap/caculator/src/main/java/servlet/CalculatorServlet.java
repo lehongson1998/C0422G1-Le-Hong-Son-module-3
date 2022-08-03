@@ -32,7 +32,6 @@ public class CalculatorServlet extends HttpServlet {
         }
         request.setCharacterEncoding("UTF-8");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/caculator.jsp");
-//        request.setAttribute("result",result);
         if (error != null) {
             request.setAttribute("error", error);
         }else {

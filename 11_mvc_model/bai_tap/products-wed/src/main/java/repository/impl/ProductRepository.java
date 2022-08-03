@@ -50,7 +50,7 @@ public class ProductRepository implements IProductRepository {
     public void update(int id, String name, double price, String produce, String image) {
         for (int i = 0; i < productsList.size(); i++) {
             if (id == productsList.get(i).getId()){
-                if (name != ""){
+                if (!name.equals("")){
                     productsList.get(i).setName(name);
                 }
                 else {
@@ -62,13 +62,13 @@ public class ProductRepository implements IProductRepository {
                 else {
                     productsList.get(i).setPrice(productsList.get(i).getPrice());
                 }
-                if (produce != ""){
+                if (!produce.equals("")){
                     productsList.get(i).setProduce(produce);
                 }
                 else {
                     productsList.get(i).setProduce(productsList.get(i).getProduce());
                 }
-                if (image != ""){
+                if (!image.equals("")){
                     productsList.get(i).setImage(image);
                 }
                 else {

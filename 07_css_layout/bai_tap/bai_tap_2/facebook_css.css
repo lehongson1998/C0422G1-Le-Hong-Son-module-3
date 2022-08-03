@@ -1,11 +1,21 @@
 .taskbar{
     background-color: #242526;
-    height: 50px;
     display: flex;
     top: 0;
     left: 0;
     position: fixed;
 
+}
+body{
+    color: #cdcdcd;
+    background-color: #3a3b3c;
+}
+
+.input{
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 8px;
 }
 
 .taskbar__left{
@@ -15,6 +25,7 @@
 .taskbar__right{
     display: flex;
 }
+
 :root{
     --col-size: calc(100% /12);
 }
@@ -31,3 +42,93 @@
 .col-m-10{width: calc(var(--col-size) * 10)}
 .col-m-11{width: calc(var(--col-size) * 11)}
 .col-m-12{width: calc(var(--col-size) * 12)}
+
+i{
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.taskbar__mid a{
+    color: #0c63e4;
+}
+
+/*.taskbar__mid i{*/
+/*    margin: 5px 40px;*/
+/*}*/
+
+.taskbar__right i{
+    margin: 5px 10px;
+    float: right;
+    padding: 5px;
+    font-size: 22px;
+}
+
+@media only screen and (max-width:740px ){
+    .col-s-1 {width: 8.33333%;}
+    .col-s-2 {width: 16.66667%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33333%;}
+    .col-s-5 {width: 41.66667%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33333%;}
+    .col-s-8 {width: 66.66667%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33333%;}
+    .col-s-11 {width: 91.66667%;}
+    .col-s-12 {width: 100%;}
+    /*tăng kích thước font cho dễ đọc*/
+    li{
+        font-size: 12px;
+        text-align: center;
+        color: white;
+    }
+    p{
+        font-size: 25px;
+        color: white;
+    }
+    .title{
+        font-size: 55px;
+        color: white;
+    }
+    i{
+        font-size: 20px;
+    }
+}
+
+i:hover{
+    color: #0c63e4;
+    background-color: #cdcdcd;
+}
+
+.label{
+    background-color: #3a3b3c;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.body{
+    background-color: #3a3b3c;
+}
+.menu{
+    display: block;
+    padding-top: 50px;
+}
+
+.menu ul li{
+    padding: 15px;
+    list-style-type: none;
+}
+
+.menu ul li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+li:hover{
+    background-color: black;
+    font-size: 30px;
+}

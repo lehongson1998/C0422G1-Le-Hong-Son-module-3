@@ -2,44 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>tạo giao diện facebook</title>
-    <link rel="stylesheet" href="facebook_css.css">
     <script src="https://kit.fontawesome.com/8a4e8d8d08.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../bootstrap-5.1.3-dist/css/bootstrap.css">
+    <script src="../../../bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+
 </head>
 <body>
-<div class="taskbar col-m-12">
-    <div class="col-m-3 taskbar__left">
-        <div class="taskbar__element"><i class="fa-brands fa-facebook fa-3x" style="color: #1092f3"></i></div>
-        <div class="taskbar__element"><i class="fa-solid fa-magnifying-glass fa 2x"></i></div>
-    </div>
-    <div class="col-m-6 taskbar__right">
-        <div class="taskbar__element"><i class="fa-solid fa-house fa-2x"></i></div>
-        <div class="taskbar__element"><i class="fa-solid fa-tv fa-2x"></i></div>
-        <div class="taskbar__element"><i class="fa-solid fa-store fa-2x"></i></div>
-        <div class="taskbar__element"><i class="fa-solid fa-users-rectangle fa-2x"></i></div>
-        <div class="taskbar__element"><i class="fa-light fa-game-board-simple fa-2x"></i></div>
-    </div>
-</div>
-<!--<div class="body">-->
-<!--    <div class="body__menu col-m-3">-->
-<!--        <ul>-->
-<!--            <li><a href="#"><h4>Name</h4></a></li>-->
-<!--            <li><a href="#"><h4>Friend</h4></a></li>-->
-<!--            <li><a href="#"><h4>History</h4></a></li>-->
-<!--            <li><a href="#"><h4>Group</h4></a></li>-->
-<!--            <li><a href="#"><h4>Marketplace</h4></a></li>-->
-<!--            <li><a href="#"><h4>Watch</h4></a></li>-->
-<!--            <li><a href="#"><h4>Love</h4></a></li>-->
-<!--            <li><a href="#"><h4>Game</h4></a></li>-->
-<!--            <li><a href="#"><h4>Saved</h4></a></li>-->
-<!--            <li><a href="#"><h4>Facebook Pay</h4></a></li>-->
-<!--            <li><a href="#"><h4>Messenger</h4></a></li>-->
-<!--            <li><a href="#"><h4>Event</h4></a></li>-->
-<!--            <li><a href="#"><h4>Video</h4></a></li>-->
+<!--<div class="container">-->
+<!--<div class="taskbar col-m-12">-->
+<!--    <div class="col-m-3 taskbar__left">-->
+<!--        <a href="#"><i class="fa-brands fa-facebook col-m-4" style="color: #0c63e4; margin-right: 10px; font-size: 40px"></i></a>-->
+<!--        <span class="col-m-8 label">-->
+<!--        <a href="#"><i class="fa-solid fa-magnifying-glass" style="font-size: 20px" ></i></a>-->
+<!--            <input type="text" placeholder="tìm kiếm trên facebook" style="border: none; background-color:#3a3b3c;">-->
+<!--        </span>-->
+<!--    </div>-->
+<!--    <div class="col-m-6 taskbar__mid">-->
+<!--        <a href="#"><i class="fa-solid fa-house col-m-2"></i></a>-->
+<!--        <a href="#"><i class="fa-brands fa-youtube col-m-2"></i></a>-->
+<!--        <a href="#"><i class="fa-solid fa-shop col-m-2"></i></a>-->
+<!--        <a href="#"><i class="fa-solid fa-users-line col-m-2"></i></a>-->
+<!--        <a href="#"><i class="fa-solid fa-crop-simple col-m-2"></i></a>-->
+<!--    </div>-->
+<!--    <div class="col-m-3 taskbar__right col-m-4">-->
+<!--        <a href="#"><i class="fa-solid fa-plus col-m-4"></i></a>-->
+<!--        <a href="#"><i class="fa-brands fa-facebook-messenger col-m-4"></i></a>-->
+<!--        <a href="#"><i class="fa-solid fa-bell col-m-4"></i></a>-->
+<!--        <a href="#"><i class="fa-solid fa-user-tie col-m-4"></i></a>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="container-fluid">-->
+<!--<div class="body col-m-12">-->
+<!--    <div class="col-m-3 menu">-->
+<!--        <ul class="col-m-10">-->
+<!--            <li><span><img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.6435-9/206085461_526910871784248_9107657282629208056_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=OuZ4NWO5ekUAX8nhyAE&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT-59CYgfqVFn2vVyryCuSxAK7dUkrqnQbFbJFwCv1__WQ&oe=63056C60" style="width: 40px; height: 40px; border-radius: 50%"></span><a href="#">Lê Hồng Sơn</a></li>-->
+<!--            <li><span></span><a href="#">Bạn bè</a></li>-->
+<!--            <li><span></span><a href="#">Kỉ niệm</a></li>-->
+<!--            <li><span></span><a href="#">Nhóm</a></li>-->
+<!--            <li><span></span><a href="#">Market place</a></li>-->
+<!--            <li><span></span><a href="#">watch</a></li>-->
+<!--            <li><span></span><a href="#">Chơi game</a></li>-->
+<!--            <li><span></span><a href="#">Đã lưu</a></li>-->
+<!--            <li><span></span><a href="#">Facebook pay</a></li>-->
+<!--            <li><span></span><a href="#">Gần đây nhất</a></li>-->
+<!--            <li><span></span><a href="#">hoạt động quảng cáo</a></li>-->
+<!--            <li><span></span><a href="#">Messenger</a></li>-->
+<!--            <li><span></span><a href="#">Messenger nhí</a></li>-->
+<!--            <li><span></span><a href="#">Sự kiện</a></li>-->
+<!--            <li><span></span><a href="#">Sức khỏe</a></li>-->
+<!--            <li><span></span><a href="#">chơi game</a></li>-->
+<!--            <li><span></span><a href="#">yêu thích</a></li>-->
+<!--            <li><span class="glyphicon glyphicon-log-out" style="color: white; font-size: 100px"></span></li>-->
 <!--        </ul>-->
 <!--    </div>-->
-<!--    <div class="body__section col-m-9">section</div>-->
-<!--    <div class="body__sidebar col-m-3">sidebar</div>-->
-</div>
+<!--    <div class="col-m-6">-->
+<!--        <span class="glyphicon glyphicon-log-out" style="color: white; font-size: 100px"></span>-->
+<!--    </div>-->
+<!--    <div class="col-m-3"></div>-->
+<!--</div>-->
+<!--</div>-->
+    </div><nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar scroll</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Link</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dff968ad-30ae-4438-af80-4b6eaa0f0109" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/service/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/src/main/java/service/impl/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/src/main/webapp/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/src/main/webapp/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12_jdbc_crud/thuc_hanh/user-manager/src/main/webapp/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/css/manga_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/css/manga_css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/dptk.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/dptk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/gia_nam_hoc_vien.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/gia_nam_hoc_vien.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/manga.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/manga.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/ova_duyen_khoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/ova_duyen_khoi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/tam_nien_chi_uoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/tam_nien_chi_uoc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/tghm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_css_cascading_style_sheet/bai_tap/bai_tap_3/model/tghm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_css_layout/bai_tap/bai_tap_2/bai_tap_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../07_css_layout/bai_tap/bai_tap_2/bai_tap_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_css_layout/bai_tap/bai_tap_2/facebook_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/../07_css_layout/bai_tap/bai_tap_2/facebook_css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08_boostrap/thuc_hanh/css_th1.css" beforeDir="false" afterPath="$PROJECT_DIR$/../08_boostrap/thuc_hanh/css_th1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08_boostrap/thuc_hanh/thuc_hanh_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../08_boostrap/thuc_hanh/thuc_hanh_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/src/main/java/servlet/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10_jsp_jstl/bai_tap/caculator/src/main/java/servlet/CalculatorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/build/libs/products-wed-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/build/libs/products-wed-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/products-wed/src/main/java/repository/impl/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/products-wed/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/TranslationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/model/Products.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/model/customer/customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/IProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/impl/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/services/IProductServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/services/impl/ProductServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/servlet/CustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/unit/ProductNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/20220728_133027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/20220728_133031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/20220728_133035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/20220728_133037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/20220728_133040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/galaxynote10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/galaxys10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/galaxys20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/ip11prm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/ip12prm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/ip13prm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/image/ipxsm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/customer/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/products/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/products/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/products/display.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/products/error404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/products/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/products/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/view/products/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casa_study_database/task_21_to_25.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../casa_study_database/task_21_to_25.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2CkCK8lMLmHUz6wpr59rsI3DGY2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dff968ad-30ae-4438-af80-4b6eaa0f0109" name="Changes" comment="" />
+      <created>1659337128982</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659337128982</updated>
+      <workItem from="1659337130107" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

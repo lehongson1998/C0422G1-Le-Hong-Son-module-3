@@ -166,14 +166,16 @@ public class ProductServlet extends HttpServlet {
     private void updateProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        double price = Double.parseDouble(request.getParameter("price"));
+        String price = request.getParameter("price");
         String produce = request.getParameter("produce");
         String image = request.getParameter("image");
         RequestDispatcher requestDispatcher;
-        if ((name != "") || (price > 0) || (produce != "") || (image != "")){
-            productServices.update(id, name, price, produce, image);
+        if ((!name.equals("")) || (!price.equals("")) || (!produce.equals("")) || (!image.equals(""))){
+            double prices = Double.parseDouble(price);
+            productServices.update(id, name, prices, produce, image);
             requestDispatcher = request.getRequestDispatcher("view/products/update.jsp");
             request.setAttribute("message", "edit success");
+
         }else {
             requestDispatcher = request.getRequestDispatcher("view/products/error404.jsp");
             request.setAttribute("error", "cancel edit");
@@ -188,17 +190,22 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
+        String id = request.getParameter("id");
         String name = request.getParameter("name");
-        double price = Double.parseDouble(request.getParameter("price"));
+        String price = request.getParameter("price");
         String produce = request.getParameter("produce");
         String image = request.getParameter("image");
+
         RequestDispatcher dispatcher;
-        if ((id > 0) && (name != "") && (price > 0) && (produce != "") && (image != "")) {
-            Products products = new Products(id, name, price, produce, image);
-            productServices.save(products);
-            dispatcher = request.getRequestDispatcher("view/products/create.jsp");
-            request.setAttribute("message", "create new products success!");
+
+
+        if ((!id.equals("")) && (!name.equals("")) && (!price.equals("")) && (!produce.equals("")) && (!image.equals(""))) {
+              int id1 = Integer.parseInt(id);
+              double price1 = Double.parseDouble(price);
+              Products products = new Products(id1, name, price1, produce, image);
+              productServices.save(products);
+              dispatcher = request.getRequestDispatcher("view/products/create.jsp");
+              request.setAttribute("message", "create new products success!");
         }
         else {
             dispatcher = request.getRequestDispatcher("view/products/error404.jsp");
