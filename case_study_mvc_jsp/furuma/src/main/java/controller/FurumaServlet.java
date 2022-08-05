@@ -41,8 +41,22 @@ public class FurumaServlet extends HttpServlet {
             case "create_contract":
                 showCreateContract(request, response);
                 break;
+            case "edit_facility":
+                showEditFacility(request, response);
+                break;
             default:
                 home(request, response);
+        }
+    }
+
+    private void showEditFacility(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher rq = request.getRequestDispatcher("view/facility/edit.jsp");
+        try {
+            rq.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

@@ -68,9 +68,10 @@
 </div>
 
 <div class="text-center"><h2>LIST FACILITY</h2></div>
-<div class="pd-5">
+<div class="pd-5 container">
     <table class="table table-border">
-        <tr class="bg-info bg-gradient text-light">
+        <tr class="bg-secondary bg-gradient text-light">
+            <th>Id</th>
             <th>Name</th>
             <th>Area</th>
             <th>Cost</th>
@@ -82,50 +83,32 @@
             <th>Pool area</th>
             <th>Number floor</th>
             <th>Facility free</th>
-            <th>Action</th>
+            <th colspan="2" class="text-center">Action</th>
         </tr>
-<%--        <c:forEach var="fac" items="${facility}">--%>
             <tr>
-                <td>${fac.name}</td>
-                <td>${fac.area}</td>
-                <td>${fac.cont}</td>
-                <td>${fac.maxPeople}</td>
+                <td>1</td>
+                <td>Room twin 01</td>
+                <td>12000</td>
+                <td>1200</td>
+                <td>10</td>
+                <td>theo tháng</td>
+                <td>Room</td>
+                <td>Vip</td>
+                <td>có hồ bơi</td>
+                <td>50</td>
+                <td>10</td>
+                <td></td>
                 <td>
-                <c:if test="${rentTypeId != null}">
-                    <c:forEach var="rentType" items="${renTypeId}">
-                        ${rentType.name}
-                    </c:forEach>
-                </c:if>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=edit_facility&id=${id}'">
+                        Edit
+                    </button>
                 </td>
                 <td>
-                <c:if test="${facilityId != null}">
-                    <c:forEach var="type" items="${facilityId}">
-                        ${type.name}
-                    </c:forEach>
-                </c:if>
-                </td>
-                <td>${fac.stanrdRoom}</td>
-                <td>${fac.decreption}</td>
-                <td>${fac.poolArea}</td>
-                <td>${fac.numberFloor}</td>
-                <td>${fac.facilityFree}</td>
-                <td>
-                    <ul style="list-style: none">
-                        <li>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Action
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><button type="button" class="dropdown-item btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="editFacility(${fac.id})">Edit</button></li>
-                                    <li><button type="button" class="dropdown-item btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${fac.id})">Delete</button></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${fac.id})">
+                        Delete
+                    </button>
                 </td>
             </tr>
-<%--        </c:forEach>--%>
     </table>
 </div>
 <!-- Modal -->
@@ -149,101 +132,8 @@
    </form>
 </div>
 
-<div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form action="/furuma?action=edit" method="post">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Facility</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                            <div class="mb-3 row">
-                                <label for="editId" class="col-sm-4 col-form-label">Id</label>
-                                <div class="col-sm-8">
-                                    <input type="text" readonly class="form-control-plaintext" id="editId">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="name" class="col-sm-4 col-form-label">Name</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="name">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="area" class="col-sm-4 col-form-label">Area</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="area">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="cont" class="col-sm-4 col-form-label">Cont</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="cont">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="max-people" class="col-sm-4 col-form-label">Max people</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="max-people">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="ren-type-id" class="col-sm-4 col-form-label">Ren type id</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="ren-type-id">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="facility-type-id" class="col-sm-4 col-form-label">Facility type id</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="facility-type-id">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="standard-room" class="col-sm-4 col-form-label">Standard room</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="standard-room">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="description" class="col-sm-4 col-form-label">Description</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="description">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="pool-area" class="col-sm-4 col-form-label">Pool area</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="pool-area">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="number-floor" class="col-sm-4 col-form-label">Number floor</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="number-floor">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="facility-free" class="col-sm-4 col-form-label">Facility free</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="facility-free">
-                                </div>
-                            </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Edit</button>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
 
 <script>
-    function editFacility(id){
-        document.getElementById("editId").value = id;
-    }
     function removeFacility(id){
         document.getElementById("deleteId").value = id;
     }

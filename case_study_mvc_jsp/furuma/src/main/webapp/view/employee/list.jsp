@@ -70,51 +70,34 @@
     <h2>LIST EMPLOYEE</h2>
     <table class="table">
         <tr class="bg-light bg-gradient">
-            <th>ID</th>
-            <th>NAME</th>
-            <th>DATE OF BIRTH</th>
-            <th>ID CARD</th>
-            <th>SALARY</th>
-            <th>PHONE NUMBER</th>
-            <th>EMAIL</th>
-            <th>ADDRESS</th>
-            <th>POSITION ID</th>
-            <th>EDUCATION ID</th>
-            <th>DIVISION ID</th>
-            <th>USER NAME</th>
-            <th>ACTION</th>
+            <th>Name</th>
+            <th>Date of birth</th>
+            <th>Id card</th>
+            <th>Email</th>
+            <th>Education id</th>
+            <th>Position id</th>
+            <th>Salary</th>
+            <th colspan="2">Action</th>
         </tr>
-<%--        <c:forEach var="emp" items="${employee}">--%>
             <tr>
-                <td>${emp.id}</td>
-                <td>${emp.name}</td>
-                <td>${emp.dateOfBirth}</td>
-                <td>${emp.idCard}</td>
-                <td>${emp.salary}</td>
-                <td>${emp.phoneNumber}</td>
-                <td>${emp.email}</td>
-                <td>${emp.address}</td>
-                <td>${emp.positionID}</td>
-                <td>${emp.educationId}</td>
-                <td>${emp.divisionId}</td>
-                <td>${emp.userName}</td>
+                <td>Lê hồng sơn</td>
+                <td>06/08/1998</td>
+                <td>187592899</td>
+                <td>lhongson2909@gmail.com</td>
+                <td>Đại học</td>
+                <td>Giám đốc</td>
+                <td>2000$</td>
                 <td>
-                    <ul style="list-style: none">
-                        <li>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Action
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><button type="button" class="dropdown-item btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="editFacility(${emp.id})">Edit</button></li>
-                                    <li><button type="button" class="dropdown-item btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${emp.id})">Delete</button></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=show_edit_employee'">
+                        Edit
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${emp.id})">
+                        Delete
+                    </button>
                 </td>
             </tr>
-<%--        </c:forEach>--%>
     </table>
 </div>
 
@@ -133,91 +116,6 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary">Delete</button>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
-
-<div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form action="/furuma?action=edit" method="post">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Employee</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3 row">
-                        <label for="editId" class="col-sm-4 col-form-label">Id</label>
-                        <div class="col-sm-8">
-                            <input type="text" readonly class="form-control-plaintext" id="editId">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="date" class="col-sm-4 col-form-label">Date of birth</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="date">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="id-card" class="col-sm-4 col-form-label">Id card</label>
-                        <div class="col-sm-8">
-                            <input type="date" class="form-control" id="id-card">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="salary" class="col-sm-4 col-form-label">Salary</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="salary">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="phone" class="col-sm-4 col-form-label">Phone number</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="phone">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="email" class="col-sm-4 col-form-label">Email</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="email">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="address" class="col-sm-4 col-form-label">Address</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="address">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="position-id" class="col-sm-4 col-form-label">Position id</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="position-id">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="education-id" class="col-sm-4 col-form-label">Education id</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="education-id">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="division-id" class="col-sm-4 col-form-label">Division id</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="division-id">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="user-name" class="col-sm-4 col-form-label">User name</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="user-name">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Edit</button>
                 </div>
             </div>
         </div>

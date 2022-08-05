@@ -71,45 +71,38 @@
         <h2>LIST CUSTOMER</h2>
         <table class="table">
             <tr class="bg-secondary bg-gradient text-light">
-                <th>ID</th>
-                <th>TYPE ID</th>
-                <th>NAME</th>
-                <th>DATE OF BIRTH</th>
-                <th>GENDER</th>
-                <th>ID CARD</th>
-                <th>PHONE NUMBER</th>
-                <th>EMAIL</th>
-                <th>ADDRESS</th>
-                <th>ACTION</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Date of birth</th>
+                <th>gender</th>
+                <th>Id card</th>
+                <th>Phone number</th>
+                <th>Email</th>
+                <th>Type id</th>
+                <th>Address</th>
+                <th colspan="2">Action</th>
             </tr>
-<%--            <c:forEach var="cus" items="${customer}">--%>
                 <tr>
-                    <td>${cus.id}</td>
-                    <td>${cus.type}</td>
-                    <td>${cus.name}</td>
-                    <td>${cus.dateOfBirth}</td>
-                    <td>${cus.gender}</td>
-                    <td>${cus.idCard}</td>
-                    <td>${cus.phoneNumber}</td>
-                    <td>${cus.email}</td>
-                    <td>${cus.address}</td>
+                    <td>id</td>
+                    <td>Lê hồng Sơn</td>
+                    <td>06/08/1998</td>
+                    <td>Nam</td>
+                    <td>197592899</td>
+                    <td>0971450138</td>
+                    <td>lhongson2909@gmail.com</td>
+                    <td>1</td>
+                    <td>hưng yên, nghệ an</td>
                     <td>
-                        <ul style="list-style: none">
-                            <li>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Action
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><button type="button" class="dropdown-item btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="editFacility(${cus.id})">Edit</button></li>
-                                        <li><button type="button" class="dropdown-item btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${cus.id})">Delete</button></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=show_edit_customer'">
+                            Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${cus.id})">
+                            Delete
+                        </button>
                     </td>
                 </tr>
-<%--            </c:forEach>--%>
         </table>
     </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -132,94 +125,8 @@
     </form>
 </div>
 
-<div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form action="/furuma?action=edit" method="post">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Customer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3 row">
-                        <label for="editId" class="col-sm-4 col-form-label">Id</label>
-                        <div class="col-sm-8">
-                            <input type="text" readonly class="form-control-plaintext" id="editId">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="inputTypeId" class="col-sm-4 col-form-label">Type id</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputTypeId">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="static-name" class="col-sm-4 col-form-label">Name</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="static-name">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="staticDate" class="col-sm-4 col-form-label">Date of birth</label>
-                        <div class="col-sm-8">
-                            <input type="date" class="form-control" id="staticDate">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="gender" class="col-sm-4 col-form-label">Gender</label>
-                        <div class="col-sm-8">
-                            <div class="form-check" id="gender">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Male
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Female
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="id-card" class="col-sm-4 col-form-label">id Card</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="id-card">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="phone" class="col-sm-4 col-form-label">Phone number</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="phone">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="email" class="col-sm-4 col-form-label">Email</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="email">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="address" class="col-sm-4 col-form-label">Address</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="address">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Edit</button>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
 
 <script>
-    function editFacility(id){
-        document.getElementById("editId").value = id;
-    }
     function removeFacility(id){
         document.getElementById("deleteId").value = id;
     }

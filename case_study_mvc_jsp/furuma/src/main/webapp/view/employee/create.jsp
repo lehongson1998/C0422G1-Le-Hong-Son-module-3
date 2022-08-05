@@ -69,36 +69,24 @@
 
 <div>
     <div class="col-md-5 bg-light mt-5 p-3" style="margin: auto">
-        <h3>Create Employee</h3>
+        <h3>Edit Employee</h3>
         <form action="/furuma?action=insert_employee" method="post">
             <div class="mb-3 row">
                 <label for="name" class="col-sm-4 col-form-label">name</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="date" class="col-sm-4 col-form-label">Date of birth</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="date">
+                    <input type="date" class="form-control" id="date" name="date-of-birth">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="id-card" class="col-sm-4 col-form-label">Id card</label>
                 <div class="col-sm-8">
-                    <input type="date" class="form-control" id="id-card">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="salary" class="col-sm-4 col-form-label">Salary</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="salary">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="phone" class="col-sm-4 col-form-label">Phone number</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="phone">
+                    <input type="text" class="form-control" id="id-card" name="id-card">
                 </div>
             </div>
             <div class="mb-3 row">
@@ -108,9 +96,9 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="address" class="col-sm-4 col-form-label">Address</label>
+                <label for="edu-id" class="col-sm-4 col-form-label">Education Id</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="address">
+                    <input type="text" class="form-control" id="edu-id">
                 </div>
             </div>
             <div class="mb-3 row">
@@ -120,21 +108,9 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="education-id" class="col-sm-4 col-form-label">Education id</label>
+                <label for="salary" class="col-sm-4 col-form-label">Salary</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="education-id">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="division-id" class="col-sm-4 col-form-label">Division id</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="division-id">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="user-name" class="col-sm-4 col-form-label">User name</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="user-name">
+                    <input type="text" class="form-control" id="salary">
                 </div>
             </div>
             <div>

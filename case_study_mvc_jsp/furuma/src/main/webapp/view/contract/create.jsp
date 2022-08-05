@@ -72,19 +72,25 @@
         <h3>Create Contract</h3>
         <form action="/furuma?action=insert_contract" method="post">
             <div class="mb-3 row">
-                <label for="contract-id" class="col-sm-4 col-form-label">Id</label>
+                <label for="facility" class="col-sm-4 col-form-label">Facility Name</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="contract-id">
+                    <input type="text" class="form-control" id="facility" name="facility_name">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="start-date" class="col-sm-4 col-form-label">Start date</label>
+                <label for="cus-name" class="col-sm-4 col-form-label">Customer Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="cus-name" name="cus-name">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="start-date" class="col-sm-4 col-form-label">Start Date</label>
                 <div class="col-sm-8">
                     <input type="date" class="form-control" id="start-date">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="end-date" class="col-sm-4 col-form-label">End date</label>
+                <label for="end-date" class="col-sm-4 col-form-label">End Date</label>
                 <div class="col-sm-8">
                     <input type="date" class="form-control" id="end-date">
                 </div>
@@ -92,25 +98,19 @@
             <div class="mb-3 row">
                 <label for="deposit" class="col-sm-4 col-form-label">Deposit</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="deposit">
+                    <input type="text" class="form-control" id="deposit" name="deposit">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="employee-id" class="col-sm-4 col-form-label">Employee id</label>
+                <label for="total-money" class="col-sm-4 col-form-label">Total Money</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="employee-id">
+                    <input type="text" readonly class="form-control" id="total-money" name="total-money">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="customer-id" class="col-sm-4 col-form-label">Customer id</label>
+                <label for="attach" class="col-sm-4 col-form-label">Attach Facility</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="customer-id">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="facility-id" class="col-sm-4 col-form-label">Facility id</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="facility-id">
+                    <input type="text" class="form-control" id="attach" name="attach">
                 </div>
             </div>
             <div>

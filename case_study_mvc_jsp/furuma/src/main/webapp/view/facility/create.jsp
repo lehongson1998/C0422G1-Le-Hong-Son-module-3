@@ -68,212 +68,106 @@
     </nav>
 </div>
 
-    <div class="col-md-5 bg-light mt-5 p-3" style="margin: auto">
-        <form method="post" action="/furuma?action=select_facility">
-            <div class="mb-3 row">
-                <label for="type-facility" class="col-sm-4 col-form-label">Facility type</label>
-                <div class="col-sm-8">
-                    <select class="form-control" name="select" id="type-facility">
-                        <option value="villa">Villa</option>
-                        <option value="house">House</option>
-                        <option value="room">room</option>
-                    </select>
-                    <button type="submit" class="btn btn-success mt-3" >Accept</button>
-                </div>
-            </div>
-        </form>
-    </div>
-<div>
-    <c:if test="${villas != null}">
-    <div class="col-md-5 bg-light mt-5 p-3" style="margin: auto">
-        <h3>Create Villa</h3>
-        <form action="/furuma?action=insert_facility" method="post">
-            <div class="mb-3 row">
-                <label for="name" class="col-sm-4 col-form-label">Name</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="name">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="area" class="col-sm-4 col-form-label">Area</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="area">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="cont" class="col-sm-4 col-form-label">Cont</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="cont">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="max-people" class="col-sm-4 col-form-label">Max people</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="max-people">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="ren-type-id" class="col-sm-4 col-form-label">Ren type id</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="ren-type-id">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="facility-type-id" class="col-sm-4 col-form-label">Facility type id</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="facility-type-id">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="standard-room" class="col-sm-4 col-form-label">Standard room</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="standard-room">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="description" class="col-sm-4 col-form-label">Description</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="description">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="pool-area" class="col-sm-4 col-form-label">Pool area</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="pool-area">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="number-floor" class="col-sm-4 col-form-label">Number floor</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="number-floor">
-                </div>
-            </div>
-            <div>
-                <button class="btn btn-danger" type="button" onclick="location.href='/furuma?action=list_facility'">Cancel</button>
-                <button class="btn btn-success" type="submit">Create</button>
-            </div>
-        </form>
-    </div>
-    </c:if>
-    <c:if test="${houses != null}">
-        <div class="col-md-5 bg-light mt-5 p-3" style="margin: auto">
-            <h3>Create House</h3>
-            <form action="/furuma?action=insert_facility" method="post">
-                <div class="mb-3 row">
-                    <label for="name1" class="col-sm-4 col-form-label">Name</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="name1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="area1" class="col-sm-4 col-form-label">Area</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="area1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="cont1" class="col-sm-4 col-form-label">Cost</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="cont1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="max-people1" class="col-sm-4 col-form-label">Max people</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="max-people1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="ren-type-id1" class="col-sm-4 col-form-label">Ren type id</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="ren-type-id1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="facility-type-id1" class="col-sm-4 col-form-label">Facility type id</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="facility-type-id1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="standard-room1" class="col-sm-4 col-form-label">Standard room</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="standard-room1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="description1" class="col-sm-4 col-form-label">Description</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="description1">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="number-floor" class="col-sm-4 col-form-label">Number floor</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="number-floor1">
-                    </div>
-                </div>
-                <div>
-                    <button class="btn btn-danger" type="button" onclick="location.href='/furuma?action=list_facility'">Cancel</button>
-                    <button class="btn btn-success" type="submit">Create</button>
-                </div>
-            </form>
+<div class="container w-50 mt-2 p-2 bg-light" style="border: 1px solid grey; border-radius: 15px">
+    <h3 align="center">Add New Facility</h3>
+    <form class="row g-3">
+        <div class="col-md-12">
+            <label class="form-label">Facility type</label>
+            <select name=""  class="form-select" onchange="showServiceInput(this)">
+                <option value="None" >Select Facility</option>
+                <option value="Villa" >Villa</option>
+                <option value="House" >House</option>
+                <option value="Room" >Room</option>
+            </select>
         </div>
-    </c:if>
-    <c:if test="${room != null}">
-        <div class="col-md-5 bg-light mt-5 p-3" style="margin: auto">
-            <h3>Create Room</h3>
-            <form action="/furuma?action=insert_facility" method="post">
-                <div class="mb-3 row">
-                    <label for="name2" class="col-sm-4 col-form-label">Name</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="name2">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="area2" class="col-sm-4 col-form-label">Area</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="area2">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="cont2" class="col-sm-4 col-form-label">Cont</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="cont2">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="max-people2" class="col-sm-4 col-form-label">Max people</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="max-people2">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="ren-type-id2" class="col-sm-4 col-form-label">Ren type id</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="ren-type-id2">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="facility-type-id2" class="col-sm-4 col-form-label">Facility type id</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="facility-type-id2">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="facility-free" class="col-sm-4 col-form-label">Facility free</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="facility-free">
-                    </div>
-                </div>
-                <div>
-                    <button class="btn btn-danger" type="button" onclick="location.href='/furuma?action=list_facility'">Cancel</button>
-                    <button class="btn btn-success" type="submit">Create</button>
-                </div>
-            </form>
+
+        <div class="col-md-12">
+            <label for="name" class="form-label">Facility Name</label>
+            <input type="text" class="form-control" id="name" name="name">
         </div>
-    </c:if>
+        <div class="col-md-12">
+            <label for="area" class="form-label">Area</label>
+            <input type="text" class="form-control" id="area" name="area">
+        </div>
+        <div class="col-md-12">
+            <label for="cost" class="form-label">Deposit</label>
+            <input type="text" class="form-control" id="cost"  name="cost" >
+        </div>
+        <div class="col-md-12">
+            <label for="inputAddress2" class="form-label">Max people</label>
+            <input type="text" class="form-control" id="inputAddress2"  name="max_people" >
+        </div>
+        <div class="col-md-12">
+            <label for="inputCity" class="form-label">Rent Type</label>
+            <input type="text" class="form-control" id="inputCity" name="rent_type_id">
+        </div>
+        <div class="col-md-12 " id="s1" style="display: none">
+            <label for="standard_room" class="form-label">Standard Room</label>
+            <input type="text" class="form-control" id="standard_room" name="standard_room">
+        </div>
+
+        <div class="col-md-12 " id="s2" style="display: none">
+            <label for="description_other_convenience" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description_other_convenience" name="description_other_convenience">
+        </div>
+
+        <div class="col-md-12 " id="s3" style="display: none">
+            <label for="pool_area" class="form-label">Pool Area</label>
+            <input type="text" class="form-control" id="pool_area" name="pool_area">
+        </div>
+
+        <div class="col-md-12" id="s4" style="display: none">
+            <label for="number_of_floors" class="form-label">Number Floor</label>
+            <input type="text" class="form-control" id="number_of_floors" name="number_of_floors">
+        </div>
+
+        <div class="col-md-12 " id="s5" style="display: none">
+            <label for="facility_free" class="form-label">Facility Free</label>
+            <input type="text" class="form-control" id="facility_free" name="facility_free">
+        </div>
+
+        <div class="col-12 ">
+            <button type="button" class="btn btn-danger">Back</button>
+            <button type="submit" class="btn btn-success">Create</button>
+        </div>
+    </form>
 </div>
+<script>
+
+    function showServiceInput(value) {
+        let v = value.value;
+        switch (v) {
+            case 'None':
+                document.getElementById("s1").style.display="none";
+                document.getElementById("s2").style.display="none";
+                document.getElementById("s3").style.display="none";
+                document.getElementById("s4").style.display="none";
+                document.getElementById("s5").style.display="none";
+                break;
+            case "Villa":
+                document.getElementById("s1").style.display="block";
+                document.getElementById("s2").style.display="block";
+                document.getElementById("s3").style.display="block";
+                document.getElementById("s4").style.display="block";
+                document.getElementById("s5").style.display="none";
+                break;
+            case "House":
+                document.getElementById("s1").style.display="block";
+                document.getElementById("s2").style.display="block";
+                document.getElementById("s4").style.display="block";
+                document.getElementById("s5").style.display="none";
+                document.getElementById("s3").style.display="none";
+                break;
+            case "Room":
+                document.getElementById("s1").style.display="none";
+                document.getElementById("s2").style.display="none";
+                document.getElementById("s3").style.display="none";
+                document.getElementById("s4").style.display="none";
+                document.getElementById("s5").style.display="block";
+                break;
+        }
+    }
+</script>
 
 
 
