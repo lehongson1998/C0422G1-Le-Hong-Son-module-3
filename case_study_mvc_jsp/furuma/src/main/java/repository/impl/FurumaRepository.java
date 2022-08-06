@@ -16,6 +16,8 @@ public class FurumaRepository implements IFurumaRepository {
     private final String SELECT_CUSTOMER = "CALL find_all_customer();";
     private final String SELECT_CUSTOMER_BY_ID = "CALL find_customer_by_id(?);";
     private final String ADD_NEW_CUSTOMER = "CALL insert_new_customer(?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    private final String EDIT_CUSTOMER = "CALL edit_customer(?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    private final String DELETE_CUSTOMER = "CALL delete_customer(?);";
     @Override
     public List<Customer> findCustomer() {
         List<Customer> customerList = new ArrayList<>();
@@ -88,6 +90,44 @@ public class FurumaRepository implements IFurumaRepository {
             callableStatement.setString(7, customer.getPhoneNumber());
             callableStatement.setString(8, customer.getEmail());
             callableStatement.setString(9, customer.getAddress());
+            check = callableStatement.executeUpdate();
+            return check > 0? true: false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean editCustomer(int id, Customer customer) {
+        Connection connection = DatabaseConnect.getConnectDB();
+        int check;
+        try {
+            CallableStatement callableStatement = connection.prepareCall(EDIT_CUSTOMER);
+            callableStatement.setInt(1, id);
+            callableStatement.setInt(2, customer.getTypeCustomerId());
+            callableStatement.setString(3, customer.getName());
+            callableStatement.setString(4, customer.getDateOfBirth());
+            callableStatement.setInt(5, customer.getGender());
+            callableStatement.setString(6, customer.getIdCard());
+            callableStatement.setString(7, customer.getPhoneNumber());
+            callableStatement.setString(8, customer.getEmail());
+            callableStatement.setString(9, customer.getAddress());
+            check = callableStatement.executeUpdate();
+            return check > 0? true: false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean deleteCustomer(int id) {
+        Connection connection = DatabaseConnect.getConnectDB();
+        int check;
+        try {
+            CallableStatement callableStatement = connection.prepareCall(DELETE_CUSTOMER);
+            callableStatement.setInt(1, id);
             check = callableStatement.executeUpdate();
             return check > 0? true: false;
         } catch (SQLException e) {

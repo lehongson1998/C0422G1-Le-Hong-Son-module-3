@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -141,8 +142,12 @@
             <button class="btn btn-success" type="submit">Create</button>
         </div>
     </form>
-</div>
-</div>
+        <c:if test="${message != null}">
+        <div class="col-md-5 bg-light mt-5 p-3 text-center" style="margin: auto">
+            <h1>${message}</h1>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.href='/furuma?action=list_customer'">Back</button>
+        </div>
+        </c:if>
 
 <script src="https://kit.fontawesome.com/8a4e8d8d08.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

@@ -70,6 +70,19 @@
     <div class="container text-center pd-5">
         <h2>LIST CUSTOMER</h2>
         <table class="table">
+            <tr class="bg-success">
+                <th colspan="4" class="text-center">
+                    <button class="btn btn-info text-light" onclick="location.href='/furuma?action=create_customer'">
+                        Add new Customer
+                    </button>
+                </th>
+                <th colspan="7">
+                    <form class="d-flex" action="/furuma?action=search_by_id">
+                        <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search" name="id">
+                        <button class="btn btn-outline-info text-light" type="submit">Search</button>
+                    </form>
+                </th>
+            </tr>
             <tr class="bg-secondary bg-gradient text-light">
                 <th>Id</th>
                 <th>Name</th>
@@ -87,7 +100,14 @@
                     <td>${cus.id}</td>
                     <td>${cus.name}</td>
                     <td>${cus.dateOfBirth}</td>
-                    <td>${cus.gender}</td>
+                    <c:choose>
+                        <c:when test="${cus.gender==1}">
+                            <td>Male</td>
+                        </c:when>
+                        <c:when test="${cus.gender==0}">
+                            <td>Female</td>
+                        </c:when>
+                    </c:choose>
                     <td>${cus.idCard}</td>
                     <td>${cus.phoneNumber}</td>
                     <td>${cus.email}</td>
@@ -99,7 +119,7 @@
                         </button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${cus.id})">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeCustomer(${cus.id})">
                             Delete
                         </button>
                     </td>
@@ -108,7 +128,7 @@
         </table>
     </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form action="/furuma?action=delete">
+    <form action="/furuma?action=delete_customer" method="post">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -116,7 +136,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="text" readonly id="deleteId" class="form-control-plaintext">
+                    <input type="text" id="deleteId" name="id" class="form-control-plaintext">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -129,7 +149,7 @@
 
 
 <script>
-    function removeFacility(id){
+    function removeCustomer(id){
         document.getElementById("deleteId").value = id;
     }
 </script>

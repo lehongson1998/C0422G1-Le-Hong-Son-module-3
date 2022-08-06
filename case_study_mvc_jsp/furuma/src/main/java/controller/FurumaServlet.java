@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -47,14 +48,33 @@ public class FurumaServlet extends HttpServlet {
             case "create_contract":
                 showCreateContract(request, response);
                 break;
-            case "edit_facility":
+            case "show_edit_facility":
                 showEditFacility(request, response);
                 break;
             case "show_edit_customer":
                 showEditCustomer(request, response);
                 break;
+            case "search_by_id":
+                showCustomerById(request, response);
+                break;
             default:
                 home(request, response);
+        }
+    }
+
+    private void showCustomerById(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = furumaService.findCustomerById(id);
+        List<Customer> customerList = new ArrayList<>();
+        customerList.add(customer);
+        request.setAttribute("customer", customerList);
+        RequestDispatcher rq = request.getRequestDispatcher("view/customer/list.jsp");
+        try {
+            rq.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -222,6 +242,9 @@ public class FurumaServlet extends HttpServlet {
             case "insert_customer":
                 insertCustomer(request, response);
                 break;
+            case "edit_customer":
+                editCustomer(request, response);
+                break;
             case "insert_employee":
                 insertEmployee(request, response);
                 break;
@@ -231,9 +254,52 @@ public class FurumaServlet extends HttpServlet {
             case "insert_contract":
                 insertContract(request, response);
                 break;
-            case "select_facility":
-                showFormCreatFacility(request, response);
+            case "delete_customer":
+                deleteCustomer(request, response);
                 break;
+        }
+    }
+
+    private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        furumaService.deleteCustomer(id);
+        List<Customer> customerList = furumaService.findCustomer();
+        request.setAttribute("customer", customerList);
+        RequestDispatcher rq = request.getRequestDispatcher("view/customer/list.jsp");
+        try {
+            rq.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void editCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        int typeId = Integer.parseInt(request.getParameter("typeId"));
+        String name = request.getParameter("name");
+        String dateOfBirth = request.getParameter("date");
+        int gender = Integer.parseInt(request.getParameter("gender"));
+        String idCard = request.getParameter("idCard");
+        String phone = request.getParameter("phone");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        Customer customer = new Customer(id, typeId, name, dateOfBirth, gender, idCard, phone, email, address);
+        boolean flag = furumaService.editCustomer(id, customer);
+
+        if (flag){
+            request.setAttribute("message", "edit success");
+        }else {
+            request.setAttribute("message", "edit error");
+        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -261,9 +327,10 @@ public class FurumaServlet extends HttpServlet {
         String address = request.getParameter("address");
         Customer customer = new Customer(id, typeId, name, dateOfBirth, gender, idCard, phone, email, address);
         boolean flag = furumaService.addCustomer(customer);
-        request.setAttribute("mesage", "insert error");
         if (flag){
             request.setAttribute("message", "insert success");
+        }else {
+            request.setAttribute("message", "insert error");
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/create.jsp");
         try {

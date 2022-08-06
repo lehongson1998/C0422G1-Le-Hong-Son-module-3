@@ -33,6 +33,16 @@ public class FurumaService implements IFurumaService {
     }
 
     @Override
+    public boolean editCustomer(int id, Customer customer) {
+        return furumaRepository.editCustomer(id, customer);
+    }
+
+    @Override
+    public Boolean deleteCustomer(int id) {
+        return furumaRepository.deleteCustomer(id);
+    }
+
+    @Override
     public boolean addEmployee(Employee employee) {
         return false;
     }

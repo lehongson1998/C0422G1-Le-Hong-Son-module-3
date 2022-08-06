@@ -18,7 +18,7 @@
                     <div class="mb-3 row">
                         <label for="editId" class="col-sm-4 col-form-label">Id</label>
                         <div class="col-sm-8">
-                            <input type="hidden" class="form-control-plaintext" id="editId" name="id" value="<c:out value='${cus.id}' />">
+                            <input type="text" readonly class="form-control-plaintext" id="editId" name="id" value="<c:out value='${cus.id}' />">
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -43,13 +43,13 @@
                         <label for="gender" class="col-sm-4 col-form-label">Gender</label>
                         <div class="col-sm-8">
                             <div class="form-check" id="gender">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="gender" value="1" id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Male
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <input class="form-check-input" type="radio" name="gender" value="0" id="flexRadioDefault2" checked>
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Female
                                 </label>
@@ -65,7 +65,7 @@
                     <div class="mb-3 row">
                         <label for="phone" class="col-sm-4 col-form-label">Phone number</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="phone" value="<c:out value='${cus.phoneNumber}' />">
+                            <input type="text" class="form-control" id="phone" name="phone" value="<c:out value='${cus.phoneNumber}' />">
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -89,6 +89,12 @@
         </c:if>
     </div>
 </form>
+<c:if test="${message != null}">
+    <div class="col-md-5 bg-light mt-5 p-3 text-center" style="margin: auto">
+        <h1>${message}</h1>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.href='/furuma?action=list_customer'">Back</button>
+    </div>
+</c:if>
 
 <script src="https://kit.fontawesome.com/8a4e8d8d08.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

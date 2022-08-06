@@ -14,6 +14,8 @@ public interface IFurumaRepository {
     List<Employee> findAllEmployee();
     Customer findCustomerById(int id);
     boolean addCustomer(Customer customer);
+    boolean editCustomer(int id, Customer customer);
+    Boolean deleteCustomer(int id);
     boolean addEmployee(Employee employee);
     boolean addVilla(Villa villa);
     boolean addHouse(House house);
