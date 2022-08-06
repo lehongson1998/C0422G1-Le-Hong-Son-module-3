@@ -72,34 +72,40 @@
     <h3>Create Customer</h3>
     <form action="/furuma?action=insert_customer" method="post">
         <div class="mb-3 row">
+            <label for="id" class="col-sm-4 col-form-label">Id</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="id" name="id">
+            </div>
+        </div>
+        <div class="mb-3 row">
             <label for="inputTypeId" class="col-sm-4 col-form-label">Type id</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputTypeId">
+                <input type="text" class="form-control" id="inputTypeId" name="typeId">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="static-name" class="col-sm-4 col-form-label">Name</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="static-name">
+                <input type="text" class="form-control" id="static-name" name="name">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="staticDate" class="col-sm-4 col-form-label">Date of birth</label>
             <div class="col-sm-8">
-                <input type="date" class="form-control" id="staticDate">
+                <input type="date" class="form-control" id="staticDate" name="dateOfBirth">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="gender" class="col-sm-4 col-form-label">Gender</label>
             <div class="col-sm-8">
                 <div class="form-check" id="gender">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="gender" value="1" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1">
                         Male
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <input class="form-check-input" type="radio" name="gender" value="0" id="flexRadioDefault2" checked>
                     <label class="form-check-label" for="flexRadioDefault2">
                         Female
                     </label>
@@ -109,25 +115,25 @@
         <div class="mb-3 row">
             <label for="id-card" class="col-sm-4 col-form-label">id Card</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="id-card">
+                <input type="text" class="form-control" id="id-card" name="idCard">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="phone" class="col-sm-4 col-form-label">Phone number</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="phone">
+                <input type="text" class="form-control" id="phone" name="phone">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="email" class="col-sm-4 col-form-label">Email</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="email">
+                <input type="text" class="form-control" id="email" name="email">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="address" class="col-sm-4 col-form-label">Address</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="address">
+                <input type="text" class="form-control" id="address" name="address">
             </div>
         </div>
         <div>

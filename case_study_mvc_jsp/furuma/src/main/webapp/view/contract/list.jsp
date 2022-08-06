@@ -92,12 +92,12 @@
                 <td>1400</td>
                 <td>2 xe máy</td>
                 <td>
-                    <button type="button" class="dropdown-item btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=edit_contract'">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=edit_contract'">
                         Edit
                     </button>
                 </td>
                 <td>
-                    <button type="button" class="dropdown-item btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${con.id})">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removeFacility(${con.id})">
                         Delete
                     </button>
                 </td>

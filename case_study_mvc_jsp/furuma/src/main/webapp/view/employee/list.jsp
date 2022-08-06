@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>list employee</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
@@ -88,7 +88,7 @@
                 <td>Giám đốc</td>
                 <td>2000$</td>
                 <td>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=show_edit_employee'">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="editEmployee(${emp.id})">
                         Edit
                     </button>
                 </td>
@@ -122,11 +122,78 @@
     </form>
 </div>
 
+<div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form action="/furuma?action=edit_employee">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Employee</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        <div class="mb-3 row">
+                            <label for="editId" class="col-sm-4 col-form-label">Id</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="editId" name="id">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="name" class="col-sm-4 col-form-label">name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="date" class="col-sm-4 col-form-label">Date of birth</label>
+                            <div class="col-sm-8">
+                                <input type="date" class="form-control" id="date" name="date-of-birth">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="id-card" class="col-sm-4 col-form-label">Id card</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="id-card" name="id-card">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="email" class="col-sm-4 col-form-label">Email</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="edu-id" class="col-sm-4 col-form-label">Education Id</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="edu-id">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="position-id" class="col-sm-4 col-form-label">Position id</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="position-id">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="salary" class="col-sm-4 col-form-label">Salary</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="salary">
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
 <script>
-    function editFacility(id){
+    function editEmployee(id){
         document.getElementById("editId").value = id;
     }
-    function removeFacility(id){
+    function removeEmployee(id){
         document.getElementById("deleteId").value = id;
     }
 </script>

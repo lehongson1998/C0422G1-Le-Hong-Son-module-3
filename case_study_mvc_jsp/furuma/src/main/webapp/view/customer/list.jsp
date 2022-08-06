@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="sticky-top row">
-    <nav class="navbar navbar-expand-lg navbar-light bg-success bg-gradient">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success bg-gradient text-light">
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="/furuma">
                 <i class="fa-solid fa-house-chimney fs-4 text"></i>
@@ -82,18 +82,19 @@
                 <th>Address</th>
                 <th colspan="2">Action</th>
             </tr>
-                <tr>
-                    <td>id</td>
-                    <td>Lê hồng Sơn</td>
-                    <td>06/08/1998</td>
-                    <td>Nam</td>
-                    <td>197592899</td>
-                    <td>0971450138</td>
-                    <td>lhongson2909@gmail.com</td>
-                    <td>1</td>
-                    <td>hưng yên, nghệ an</td>
+            <c:forEach var="cus" items="${customer}">
+                <tr class="bg-light bg-gradient">
+                    <td>${cus.id}</td>
+                    <td>${cus.name}</td>
+                    <td>${cus.dateOfBirth}</td>
+                    <td>${cus.gender}</td>
+                    <td>${cus.idCard}</td>
+                    <td>${cus.phoneNumber}</td>
+                    <td>${cus.email}</td>
+                    <td>${cus.typeCustomerId}</td>
+                    <td>${cus.address}</td>
                     <td>
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=show_edit_customer'">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="location.href='/furuma?action=show_edit_customer&id=${cus.id}'">
                             Edit
                         </button>
                     </td>
@@ -103,6 +104,7 @@
                         </button>
                     </td>
                 </tr>
+            </c:forEach>
         </table>
     </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

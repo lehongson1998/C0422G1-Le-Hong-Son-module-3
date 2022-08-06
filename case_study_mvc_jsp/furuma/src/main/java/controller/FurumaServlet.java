@@ -1,12 +1,18 @@
 package controller;
 
+import model.customer.Customer;
+import service.impl.FurumaService;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.Date;
+import java.util.List;
 
 @WebServlet(name = "FurumaServlet", value = "/furuma")
 public class FurumaServlet extends HttpServlet {
+    FurumaService furumaService = new FurumaService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html; charset=UTF-8");
@@ -44,8 +50,25 @@ public class FurumaServlet extends HttpServlet {
             case "edit_facility":
                 showEditFacility(request, response);
                 break;
+            case "show_edit_customer":
+                showEditCustomer(request, response);
+                break;
             default:
                 home(request, response);
+        }
+    }
+
+    private void showEditCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = furumaService.findCustomerById(id);
+        RequestDispatcher rq = request.getRequestDispatcher("view/customer/edit.jsp");
+        request.setAttribute("cus" , customer);
+        try {
+            rq.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -96,7 +119,10 @@ public class FurumaServlet extends HttpServlet {
     }
 
     private void showListCustomer(HttpServletRequest request, HttpServletResponse response) {
+        List<Customer> customerList = furumaService.findCustomer();
+        request.setAttribute("customer", customerList);
         RequestDispatcher rq = request.getRequestDispatcher("view/customer/list.jsp");
+
         try {
             rq.forward(request, response);
         } catch (ServletException e) {
@@ -224,6 +250,28 @@ public class FurumaServlet extends HttpServlet {
     }
 
     private void insertCustomer(HttpServletRequest request, HttpServletResponse response) {
-
+        int id = Integer.parseInt(request.getParameter("id"));
+        int typeId = Integer.parseInt(request.getParameter("typeId"));
+        String name = request.getParameter("name");
+        String dateOfBirth = request.getParameter("dateOfBirth");
+        int gender = Integer.parseInt(request.getParameter("gender"));
+        String idCard = request.getParameter("idCard");
+        String phone = request.getParameter("phone");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        Customer customer = new Customer(id, typeId, name, dateOfBirth, gender, idCard, phone, email, address);
+        boolean flag = furumaService.addCustomer(customer);
+        request.setAttribute("mesage", "insert error");
+        if (flag){
+            request.setAttribute("message", "insert success");
+        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/create.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
