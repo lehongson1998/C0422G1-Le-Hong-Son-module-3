@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>create customer</title>
+    <th:block th:replace="~{/layout/home :: cssScript}"></th:block>
+</head>
+<body>
+<nav th:replace="~{/layout/header_footer::header}"></nav>
+<div th:replace="~{/layout/home::carousel}"></div>
+<div class="container w-50 mt-4 p-2 mb-4" style="border: 1px solid grey; border-radius: 15px">
+    <h3 align="center" class="text-info">Add new Customer</h3>
+    <form class="row g-3" action="/customer/create" method="post" th:object="${customerDto}">
+
+        <div class="col-md-12">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" th:field="*{name}" class="form-control" id="name">
+            <p th:errors="*{name}" class="text-danger"></p>
+        </div>
+        <div class="col-md-12">
+            <label for="birthday" class="form-label">Date Of Birth</label>
+            <input type="date" th:field="*{dateOfBirth}"class="form-control" id="birthday">
+            <p th:errors="*{dateOfBirth}" class="text-danger"></p>
+        </div>
+        <div class="col-md-12">
+            <label  class="form-label me-4">Gender</label>
+            <input type="radio" name="gender" value="true" th:field="*{gender}"><span>Male</span>
+            <input type="radio" name="gender" value="false" th:field="*{gender}"><span>Female</span>
+            <p th:errors="*{gender}" class="text-danger"></p>
+        </div>
+        <div class="col-md-12">
+            <label for="id_card" class="form-label">Id Card</label>
+            <input type="text" class="form-control" id="id_card" th:field="*{idCard}">
+            <p th:errors="*{idCard}" class="text-danger"></p>
+        </div>
+        <div class="col-md-12">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phone" th:field="*{phoneNumber}">
+            <p th:errors="*{phoneNumber}" class="text-danger"></p>
+        </div>
+        <div class="col-md-12 " id="s1" >
+            <label for="email" class="form-label">Email </label>
+            <input type="text" class="form-control" id="email" th:field="*{email}">
+            <p th:errors="*{email}" class="text-danger"></p>
+        </div>
+        <div class="input-group mb-3">
+            <select name="categoryName" th:field="*{typeCustomerDto.id}">
+                <option th:each="type : ${customerType}"
+                        th:value="${type.typeCustomerId}"
+                        th:text="${type.typeNameCustomer}">
+                </option>
+            </select>
+            <p th:errors="*{typeCustomerDto}" class="text-danger"></p>
+        </div>
+
+
+        <div class="col-md-12 " id="s2" >
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" th:field="*{address}">
+            <p th:errors="*{address}" class="text-danger"></p>
+        </div>
+
+        <div class="col-12 ">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>
+<footer th:replace="/layout/header_footer::footer"></footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>header and footer</title>
+</head>
+<body>
+<header th:fragment="header">
+    <div class="header navbar navbar-dark bg-dark bg-gradient fixed-top">
+        <div class="container-fluid d-flex align-content-around">
+            <div class="logo flex-grow-0 col-lg-6">
+                <a href="/facility" class="navbar-brand" title="Guest Reservations">
+                    <img title="Guest Reservations - Logo" alt="Guest Reservations - Logo"
+                         src="/img/logo-bell-dark.svg" width="230" height="30"><br>
+                    <small class="fs-6">An independent travel network</small>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <nav class="navbar navbar-expand-sm bg-dark bg-gradient">
+                    <ul class="navbar-nav" style="margin: auto">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="/facility/list">
+                                <span class="fa fa-earth text-info"></span> Service
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/contract/list">
+                                <span class="fa fa-list text-success"></span> Contract
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/customer/list">
+                                <span class="fa fa-person text-warning"></span> Customer
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/employee/list">
+                                <span class="fa fa-user text-danger"></span> Employee
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="phone border-left js-mp-track-phone">
+                <div class="for-desktop">
+                    <a class="d-flex flex-column text-decoration-none" href="tel:8554701527"><span class="text-warning">
+                    <span class="fa fa-phone"></span>
+                        <span class="js-phone-number">(855) 470-1527</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<footer class="row row-cols-5 py-5 my-5 border-top" th:fragment="footer">
+    <div class="col">
+        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+        </a>
+        <p class="text-muted">© 2021</p>
+    </div>
+
+    <div class="col">
+
+    </div>
+
+    <div class="col">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+    </div>
+</footer>
+</nav>
+</body>
+</html>
